@@ -1,0 +1,4 @@
+com/luis/tfg/ipfilter/IPFilterAgentTest$TestMethodWithBlacklist.class
+com/luis/tfg/ipfilter/MockInstrumentation.class
+com/luis/tfg/ipfilter/IPFilterAgentTest.class
+com/luis/tfg/ipfilter/IPFilterAgentTest$TestMethodWithWhitelist.class

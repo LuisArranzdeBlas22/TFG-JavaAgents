@@ -1,0 +1,21 @@
+package com.luis.tfg.order;
+
+import net.bytebuddy.agent.builder.AgentBuilder;
+import net.bytebuddy.asm.Advice;
+import net.bytebuddy.description.type.TypeDescription;
+import net.bytebuddy.matcher.ElementMatchers;
+
+import java.lang.instrument.Instrumentation;
+import java.security.ProtectionDomain;
+
+public class MethodExecutionAgent {
+
+    public static void premain(String agentArgs, Instrumentation inst) {
+        new AgentBuilder.Default()
+            .type(ElementMatchers.any())
+            .transform((builder, typeDescription, classLoader, module, protectionDomain) ->
+                builder.method(ElementMatchers.isAnnotatedWith(ExecutionOrder.class))
+                       .intercept(Advice.to(MethodExecutionAdvice.class))
+            ).installOn(inst);
+    }
+}

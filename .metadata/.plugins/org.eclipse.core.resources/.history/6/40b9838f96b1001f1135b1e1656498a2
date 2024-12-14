@@ -1,0 +1,124 @@
+package com.luis.tfg.security;
+
+import java.util.*;
+
+public class StateMachine {
+    private final Map<String, Set<String>> transitions = new HashMap<>();
+    private final Map<String, Integer> executionCounts = new HashMap<>();
+    private final Set<String> completedStates = new HashSet<>();
+    private String currentState = null;
+    private final String finalState;
+
+    public StateMachine(String regex) {
+        System.out.println("[INFO] Initializing StateMachine with regex: " + regex);
+        parseRegex(regex);
+        this.finalState = determineFinalState(regex);
+        System.out.println("[INFO] StateMachine initialized with transitions: " + transitions + ", finalState: " + finalState);
+    }
+
+    private void parseRegex(String regex) {
+        if (regex.contains("->")) {
+            handleComplexConditions(regex);
+        } else if (regex.contains(".*")) {
+            handleFlexibleSequence(regex);
+        } else if (regex.contains("{")) {
+            handleRepetitions(regex);
+        } else {
+            handleStrictSequence(regex);
+        }
+    }
+
+    private void handleStrictSequence(String regex) {
+        String[] states = regex.replaceAll("[()]", "").split(" ");
+        for (int i = 0; i < states.length - 1; i++) {
+            transitions.computeIfAbsent(states[i], k -> new HashSet<>()).add(states[i + 1]);
+        }
+    }
+
+    private void handleFlexibleSequence(String regex) {
+        String[] parts = regex.split("\\.\\*");
+        for (int i = 0; i < parts.length - 1; i++) {
+            transitions.computeIfAbsent(parts[i].trim(), k -> new HashSet<>()).add(parts[i + 1].trim());
+        }
+    }
+
+    private void handleComplexConditions(String regex) {
+        String[] parts = regex.split("->");
+        String[] preconditions = parts[0].replaceAll("[()]", "").split("&|\\|");
+        String targetState = parts[1].trim();
+
+        for (String pre : preconditions) {
+            transitions.computeIfAbsent(pre.trim(), k -> new HashSet<>()).add(targetState);
+        }
+    }
+
+    private void handleRepetitions(String regex) {
+        String[] parts = regex.split("->");
+        String state = parts[0].replaceAll("\\{.*?\\}", "").trim();
+        String targetState = parts[1].trim();
+
+        transitions.computeIfAbsent(state, k -> new HashSet<>()).add(targetState);
+
+        String repetitionCount = parts[0].substring(parts[0].indexOf("{") + 1, parts[0].indexOf("}"));
+        executionCounts.put(state, Integer.parseInt(repetitionCount));
+    }
+
+    private String determineFinalState(String regex) {
+        String[] states = regex.replaceAll("[()]", "").split(" ");
+        return states[states.length - 1];
+    }
+
+    public boolean validateTransition(String methodName) {
+        System.out.println("[INFO] Validating transition for method: " + methodName);
+
+        // Validar el estado inicial
+        if (currentState == null) {
+            if (!transitions.containsKey(methodName)) {
+                throw new IllegalStateException("Invalid starting state: " + methodName);
+            }
+            currentState = methodName;
+            completedStates.add(methodName);
+            System.out.println("[INFO] Transition valid. Current state set to: " + currentState);
+            return true;
+        }
+
+        // Validar transiciones simples
+        Set<String> validTransitions = transitions.get(currentState);
+        if (validTransitions != null && validTransitions.contains(methodName)) {
+            currentState = methodName;
+            completedStates.add(methodName);
+            if (executionCounts.containsKey(methodName)) {
+                executionCounts.put(methodName, executionCounts.get(methodName) - 1);
+                if (executionCounts.get(methodName) == 0) {
+                    executionCounts.remove(methodName);
+                }
+            }
+            System.out.println("[INFO] Transition valid. Current state updated to: " + currentState);
+            return true;
+        }
+
+        // Validar condiciones AND
+        if (transitions.containsKey(methodName)) {
+            Set<String> preconditions = transitions.get(methodName);
+            if (completedStates.containsAll(preconditions)) {
+                currentState = methodName;
+                System.out.println("[INFO] Transition valid after satisfying preconditions. Current state updated to: " + currentState);
+                return true;
+            }
+        }
+
+        throw new IllegalStateException("Invalid transition from " + currentState + " to " + methodName);
+    }
+
+    public boolean isInFinalState() {
+        return finalState.equals(currentState) && executionCounts.isEmpty();
+    }
+
+    public String getCurrentState() {
+        return currentState;
+    }
+
+    public Map<String, Set<String>> getTransitions() {
+        return transitions;
+    }
+}

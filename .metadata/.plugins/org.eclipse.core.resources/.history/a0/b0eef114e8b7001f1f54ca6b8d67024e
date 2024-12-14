@@ -1,0 +1,82 @@
+package com.luis.tfg.security;
+
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
+import java.lang.instrument.Instrumentation;
+
+public class MethodExecutionAgentTest {
+	
+	public static void main(String[] args) {
+	    System.out.println("Iniciando pruebas manuales...");
+	    MethodExecutionAgentTest test = new MethodExecutionAgentTest();
+	    test.testCorrectOrderExecution(); // Llama a tu método de prueba
+	    test.testIncorrectOrderExecution(); // Llama a tu otro método de prueba
+	    System.out.println("Pruebas completadas.");
+	}
+
+	@ExecutionOrder("(addToCart checkout payment confirmation)")
+    public static class TestClass {
+		String id;
+		public TestClass(String id) {
+			this.id=id;
+		}
+		
+        public void method1() {
+            System.out.println("Executing method1");
+        }
+
+        public void method2() {
+            System.out.println("Executing method2");
+        }
+
+        public void method3() {
+            System.out.println("Executing method3");
+        }
+
+        public void method4() {
+            System.out.println("Executing method4");
+        }
+        
+        @Override
+        public String toString() {
+            // Devuelve una representación personalizada de la clase, evita llamar a 'this' o 'String.valueOf(this)'
+            return "TestClass{id='" + id + "'}";
+        }
+    }
+
+    @Test
+    public void testCorrectOrderExecution() {
+        System.out.println("Iniciando testCorrectOrderExecution...");
+        TestClass testInstance = new TestClass("id1");
+        testInstance.method1();
+        testInstance.method2();
+        testInstance.method3();
+        testInstance.method4();
+    }
+
+    @Test
+    public void testIncorrectOrderExecution() {
+        System.out.println("Iniciando testIncorrectOrderExecution...");
+        TestClass testInstance = new TestClass("id2");
+
+        // Aquí esperamos que falle en el orden incorrecto
+        assertThrows(SecurityException.class, () -> {
+            testInstance.method1();
+            testInstance.method3(); // Esto debería lanzar una excepción
+        }, "No se lanzó SecurityException cuando se llamó a los métodos en un orden incorrecto");
+    }
+
+//    public static void premain(String agentArgs, Instrumentation inst) {
+//        System.out.println("Registrando agente para los tests...");
+//        new net.bytebuddy.agent.builder.AgentBuilder.Default()
+//                .type(net.bytebuddy.matcher.ElementMatchers.isAnnotatedWith(ExecutionOrder.class))
+//                .transform((builder, typeDescription, classLoader, module, protectionDomain) ->
+//                    builder.visit(net.bytebuddy.asm.Advice.to(MethodOrderAdvice.class)
+//                            .on(net.bytebuddy.matcher.ElementMatchers.any()))
+//                )
+//                .installOn(inst);
+//    }
+
+
+}

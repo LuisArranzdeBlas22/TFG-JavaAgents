@@ -1,0 +1,9 @@
+# Created at 2024-12-13T10:10:58.559
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'Agente iniciado. Argumentos: null'.
+
+# Created at 2024-12-13T10:10:58.565
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'El agente se estￃﾡ cargando correctamente.'.
+
+# Created at 2024-12-13T10:10:58.853
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'El agente se ha instalado correctamente.'.
+
