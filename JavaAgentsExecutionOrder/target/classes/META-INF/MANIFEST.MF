@@ -1,8 +1,0 @@
-Manifest-Version: 1.0
-Build-Jdk-Spec: 21
-Implementation-Title: MethodExecutionAgent
-Implementation-Version: 1.0-SNAPSHOT
-Main-Class: com.luis.tfg.security.MethodOrderAgent
-Created-By: Maven Integration for Eclipse
-Premain-Class: com.luis.tfg.security.MethodOrderAgent
-

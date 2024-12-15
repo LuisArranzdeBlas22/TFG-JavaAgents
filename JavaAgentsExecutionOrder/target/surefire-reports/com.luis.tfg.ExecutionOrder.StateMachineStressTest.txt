@@ -1,0 +1,24 @@
+-------------------------------------------------------------------------------
+Test set: com.luis.tfg.ExecutionOrder.StateMachineStressTest
+-------------------------------------------------------------------------------
+Tests run: 11, Failures: 4, Errors: 1, Skipped: 0, Time elapsed: 7.177 s <<< FAILURE! - in com.luis.tfg.ExecutionOrder.StateMachineStressTest
+com.luis.tfg.ExecutionOrder.StateMachineStressTest.testComplexCombinations  Time elapsed: 0.013 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: Unexpected IllegalStateException for path 1: [ERROR] Invalid transition from INITIAL to a.
+	at com.luis.tfg.ExecutionOrder.StateMachineStressTest.testComplexCombinations(StateMachineStressTest.java:61)
+
+com.luis.tfg.ExecutionOrder.StateMachineStressTest.testDeepWildcardAndRepetition  Time elapsed: 0.003 s  <<< ERROR!
+java.lang.IllegalArgumentException: [ERROR] Invalid repetition syntax in: (mid{3}
+	at com.luis.tfg.ExecutionOrder.StateMachineStressTest.testDeepWildcardAndRepetition(StateMachineStressTest.java:196)
+
+com.luis.tfg.ExecutionOrder.StateMachineStressTest.testInvalidRegexHandling  Time elapsed: 0.012 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: Expected an IllegalArgumentException for invalid regex
+	at com.luis.tfg.ExecutionOrder.StateMachineStressTest.testInvalidRegexHandling(StateMachineStressTest.java:120)
+
+com.luis.tfg.ExecutionOrder.StateMachineStressTest.testRedundantPaths  Time elapsed: 0.024 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: Unexpected IllegalStateException for path A: [ERROR] Invalid transition from INITIAL to a.
+	at com.luis.tfg.ExecutionOrder.StateMachineStressTest.testRedundantPaths(StateMachineStressTest.java:237)
+
+com.luis.tfg.ExecutionOrder.StateMachineStressTest.testDeepAndOrRepetitionCombination  Time elapsed: 0.042 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: Unexpected IllegalStateException for path 2: [ERROR] Invalid transition from alt to rep.
+	at com.luis.tfg.ExecutionOrder.StateMachineStressTest.testDeepAndOrRepetitionCombination(StateMachineStressTest.java:187)
+

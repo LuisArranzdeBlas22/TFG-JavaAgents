@@ -1,0 +1,200 @@
+package com.luis.tfg.security;
+
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+public class StateMachineStressTest {
+
+    @Test
+    public void testLongSequence() {
+        System.out.println("[TEST] Starting testLongSequence");
+
+        StringBuilder regex = new StringBuilder();
+        for (int i = 0; i < 1000; i++) {
+            regex.append("state").append(i).append(" -> ");
+        }
+        regex.append("FINAL");
+
+        TestClass instance = new TestClass("id-long-sequence");
+        ExecutionOrderRegistry.register(instance, regex.toString());
+
+        StateMachine sm = ExecutionOrderRegistry.getStateMachine(instance);
+        assertNotNull(sm, "StateMachine should not be null");
+
+        try {
+            for (int i = 0; i < 1000; i++) {
+                assertTrue(sm.validateTransition("state" + i), "Transition to state" + i + " should be valid");
+            }
+            assertTrue(sm.validateTransition("FINAL"), "Transition to FINAL should be valid");
+        } catch (IllegalStateException e) {
+            fail("Unexpected IllegalStateException: " + e.getMessage());
+        }
+
+        System.out.println("[TEST] Finished testLongSequence");
+    }
+
+    @Test
+    public void testComplexCombinations() {
+        System.out.println("[TEST] Starting testComplexCombinations");
+
+        TestClass instance = new TestClass("id-complex-combinations");
+        ExecutionOrderRegistry.register(instance, "((a | b) & (c | d)) -> (x .* y) -> z -> FINAL");
+
+        StateMachine sm = ExecutionOrderRegistry.getStateMachine(instance);
+        assertNotNull(sm, "StateMachine should not be null");
+
+        try {
+            // Camino 1: a -> c -> x -> middle1 -> middle2 -> y -> z -> FINAL
+            assertTrue(sm.validateTransition("a"), "Transition to 'a' should be valid");
+            assertTrue(sm.validateTransition("c"), "Transition to 'c' should be valid");
+            assertTrue(sm.validateTransition("x"), "Transition to 'x' should be valid");
+            assertTrue(sm.validateTransition("middle1"), "Wildcard transition 'middle1' should be valid");
+            assertTrue(sm.validateTransition("middle2"), "Wildcard transition 'middle2' should be valid");
+            assertTrue(sm.validateTransition("y"), "Transition to 'y' should be valid");
+            assertTrue(sm.validateTransition("z"), "Transition to 'z' should be valid");
+            assertTrue(sm.validateTransition("FINAL"), "Transition to 'FINAL' should be valid");
+
+            // Camino 2: b -> d -> x -> y -> z -> FINAL
+            ExecutionOrderRegistry.register(instance, "((a | b) & (c | d)) -> (x .* y) -> z -> FINAL");
+            sm = ExecutionOrderRegistry.getStateMachine(instance);
+
+            assertTrue(sm.validateTransition("b"), "Transition to 'b' should be valid");
+            assertTrue(sm.validateTransition("d"), "Transition to 'd' should be valid");
+            assertTrue(sm.validateTransition("x"), "Transition to 'x' should be valid");
+            assertTrue(sm.validateTransition("y"), "Transition to 'y' should be valid");
+            assertTrue(sm.validateTransition("z"), "Transition to 'z' should be valid");
+            assertTrue(sm.validateTransition("FINAL"), "Transition to 'FINAL' should be valid");
+        } catch (IllegalStateException e) {
+            fail("Unexpected IllegalStateException: " + e.getMessage());
+        }
+
+        System.out.println("[TEST] Finished testComplexCombinations");
+    }
+
+    @Test
+    public void testWildcardExplosion() {
+        System.out.println("[TEST] Starting testWildcardExplosion");
+
+        TestClass instance = new TestClass("id-wildcard-explosion");
+        ExecutionOrderRegistry.register(instance, "(start .* middle .* end)");
+
+        StateMachine sm = ExecutionOrderRegistry.getStateMachine(instance);
+        assertNotNull(sm, "StateMachine should not be null");
+
+        try {
+            assertTrue(sm.validateTransition("start"), "Transition to 'start' should be valid");
+            for (int i = 0; i < 100; i++) {
+                assertTrue(sm.validateTransition("wildcard" + i), "Wildcard transition 'wildcard" + i + "' should be valid");
+            }
+            assertTrue(sm.validateTransition("middle"), "Transition to 'middle' should be valid");
+            for (int i = 100; i < 200; i++) {
+                assertTrue(sm.validateTransition("wildcard" + i), "Wildcard transition 'wildcard" + i + "' should be valid");
+            }
+            assertTrue(sm.validateTransition("end"), "Transition to 'end' should be valid");
+            assertTrue(sm.isInFinalState(), "StateMachine should be in a final state");
+        } catch (IllegalStateException e) {
+            fail("Unexpected IllegalStateException: " + e.getMessage());
+        }
+
+        System.out.println("[TEST] Finished testWildcardExplosion");
+    }
+
+    @Test
+    public void testInvalidRegexHandling() {
+        System.out.println("[TEST] Starting testInvalidRegexHandling");
+
+        try {
+            TestClass instance = new TestClass("id-invalid-regex");
+            ExecutionOrderRegistry.register(instance, "(start & (a | )) -> end");
+            fail("Expected an IllegalArgumentException for invalid regex");
+        } catch (IllegalArgumentException e) {
+            assertTrue(e.getMessage().contains("Invalid"), "Expected exception for invalid regex");
+        }
+
+        System.out.println("[TEST] Finished testInvalidRegexHandling");
+    }
+
+
+    @Test
+    public void testDeepAndOrRepetitionCombination() {
+        TestClass instance = new TestClass("complex-and-or-rep");
+        ExecutionOrderRegistry.register(instance, "((start & (mid1 | mid2)) | (alt & rep{2})) -> end");
+        StateMachine sm = ExecutionOrderRegistry.getStateMachine(instance);
+        assertNotNull(sm, "StateMachine should not be null for complex combinations");
+
+        // Exploring all valid paths
+        assertTrue(sm.validateTransition("start"), "Transition to 'start' should be valid");
+        assertTrue(sm.validateTransition("mid1"), "Transition to 'mid1' should be valid");
+        assertTrue(sm.validateTransition("end"), "Transition to 'end' should be valid");
+
+        // Resetting for path 2
+        sm = ExecutionOrderRegistry.getStateMachine(instance);
+        assertTrue(sm.validateTransition("alt"), "Transition to 'alt' should be valid");
+        assertTrue(sm.validateTransition("rep"), "First 'rep' should be valid");
+        assertTrue(sm.validateTransition("rep"), "Second 'rep' should be valid");
+        assertTrue(sm.validateTransition("end"), "Transition to 'end' should be valid");
+    }
+
+    @Test
+    public void testDeepWildcardAndRepetition() {
+        TestClass instance = new TestClass("deep-wildcard-rep");
+        ExecutionOrderRegistry.register(instance, "(start .* (mid{3} | end))");
+        StateMachine sm = ExecutionOrderRegistry.getStateMachine(instance);
+        assertNotNull(sm, "StateMachine should not be null for deep wildcard and repetition");
+
+        assertTrue(sm.validateTransition("start"), "Transition to 'start' should be valid");
+        assertTrue(sm.validateTransition("wild1"), "Wildcard transition should be valid");
+        assertTrue(sm.validateTransition("mid"), "First 'mid' should be valid");
+        assertTrue(sm.validateTransition("mid"), "Second 'mid' should be valid");
+        assertTrue(sm.validateTransition("mid"), "Third 'mid' should be valid");
+        assertTrue(sm.validateTransition("end"), "Transition to 'end' should be valid");
+    }
+
+    @Test
+    public void testRedundantPaths() {
+        TestClass instance = new TestClass("redundant-paths");
+        ExecutionOrderRegistry.register(instance, "((a | b) & c) -> d -> FINAL");
+        StateMachine sm = ExecutionOrderRegistry.getStateMachine(instance);
+        assertNotNull(sm, "StateMachine should not be null for redundant paths");
+
+        // Exploring redundant path 1
+        assertTrue(sm.validateTransition("a"), "Transition to 'a' should be valid");
+        assertTrue(sm.validateTransition("c"), "Transition to 'c' should be valid");
+        assertTrue(sm.validateTransition("d"), "Transition to 'd' should be valid");
+        assertTrue(sm.validateTransition("FINAL"), "Transition to 'FINAL' should be valid");
+
+        // Reset for redundant path 2
+        sm = ExecutionOrderRegistry.getStateMachine(instance);
+        assertTrue(sm.validateTransition("b"), "Transition to 'b' should be valid");
+        assertTrue(sm.validateTransition("c"), "Transition to 'c' should be valid");
+        assertTrue(sm.validateTransition("d"), "Transition to 'd' should be valid");
+        assertTrue(sm.validateTransition("FINAL"), "Transition to 'FINAL' should be valid");
+    }
+
+    @Test
+    public void testComplexStateMachineWithCycles() {
+        TestClass instance = new TestClass("complex-cycles");
+        ExecutionOrderRegistry.register(instance, "(start -> a -> b -> c -> d -> a -> FINAL)");
+        StateMachine sm = ExecutionOrderRegistry.getStateMachine(instance);
+        assertNotNull(sm, "StateMachine should not be null for complex cycles");
+
+        assertTrue(sm.validateTransition("start"), "Transition to 'start' should be valid");
+        assertTrue(sm.validateTransition("a"), "Transition to 'a' should be valid");
+        assertTrue(sm.validateTransition("b"), "Transition to 'b' should be valid");
+        assertTrue(sm.validateTransition("c"), "Transition to 'c' should be valid");
+        assertTrue(sm.validateTransition("d"), "Transition to 'd' should be valid");
+        // Loop back to 'a'
+        assertTrue(sm.validateTransition("a"), "Transition back to 'a' should be valid");
+        // Finally, to 'FINAL'
+        assertTrue(sm.validateTransition("FINAL"), "Transition to 'FINAL' should be valid");
+    }
+
+    @Test
+    public void testInvalidStateMachineCombination() {
+        TestClass instance = new TestClass("invalid-combination");
+        assertThrows(IllegalArgumentException.class, () -> {
+            ExecutionOrderRegistry.register(instance, "(start & | end)");
+        }, "Expected an IllegalArgumentException for invalid configuration");
+    }
+}

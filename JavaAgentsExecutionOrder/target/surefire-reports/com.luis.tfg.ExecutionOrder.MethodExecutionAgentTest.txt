@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: com.luis.tfg.ExecutionOrder.MethodExecutionAgentTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.024 s <<< FAILURE! - in com.luis.tfg.ExecutionOrder.MethodExecutionAgentTest
+com.luis.tfg.ExecutionOrder.MethodExecutionAgentTest.testIncorrectOrderExecution  Time elapsed: 0.004 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: No se lanzó SecurityException cuando se llamó a los métodos en un orden incorrecto ==> Expected java.lang.SecurityException to be thrown, but nothing was thrown.
+	at com.luis.tfg.ExecutionOrder.MethodExecutionAgentTest.testIncorrectOrderExecution(MethodExecutionAgentTest.java:70)
+

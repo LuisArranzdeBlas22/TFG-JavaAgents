@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;TFGSecurityAgentTest.java&apos; to &apos;JavaAgents/src/main/java/com.luis.tfg.security&apos;&#x0A;- Original project: &apos;JavaAgentsTest&apos;&#x0A;- Destination element: &apos;JavaAgents/src/main/java/com.luis.tfg.security&apos;&#x0A;- Original element: &apos;com.luis.tfg.security.TFGSecurityAgentTest.java&apos;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="=JavaAgents/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.luis.tfg.security" element1="/src\/test\/java=/optional=/true=/=/maven.pomderived=/true=/=/test=/true=/&lt;com.luis.tfg.security{TFGSecurityAgentTest.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" patterns="*" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1729528217893" units="1" version="1.0"/>
+</session>

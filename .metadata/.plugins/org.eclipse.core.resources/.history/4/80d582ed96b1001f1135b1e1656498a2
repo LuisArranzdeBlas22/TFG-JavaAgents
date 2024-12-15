@@ -1,0 +1,165 @@
+Vamos a corregir dos de los errores más significativos detectados:
+
+1. **`testAndCondition`:** El error parece deberse a un mal manejo de las condiciones AND en las transiciones. Esto sucede porque no se están evaluando correctamente las precondiciones antes de avanzar al estado siguiente.
+
+2. **`testRepetition`:** Este error ocurre debido a la inicialización incorrecta de los estados repetitivos y su validación durante las transiciones.
+
+Voy a corregir la implementación de `StateMachine` para estos dos casos.
+
+---
+
+### Solución:
+Aquí está la versión corregida del código:
+
+```java
+package com.luis.tfg.security;
+
+import java.util.*;
+
+public class StateMachine {
+    private final Map<String, Set<String>> transitions = new HashMap<>();
+    private final Map<String, Integer> executionCounts = new HashMap<>();
+    private final Map<String, Set<String>> preconditions = new HashMap<>();
+    private final Set<String> completedStates = new HashSet<>();
+    private String currentState = null;
+    private final String finalState;
+
+    public StateMachine(String regex) {
+        System.out.println("[INFO] Initializing StateMachine with regex: " + regex);
+        parseRegex(regex);
+        this.finalState = determineFinalState(regex);
+        System.out.println("[INFO] StateMachine initialized with transitions: " + transitions + ", finalState: " + finalState);
+    }
+
+    private void parseRegex(String regex) {
+        if (regex.contains("->")) {
+            handleComplexConditions(regex);
+        } else if (regex.contains(".*")) {
+            handleFlexibleSequence(regex);
+        } else if (regex.contains("{")) {
+            handleRepetitions(regex);
+        } else {
+            handleStrictSequence(regex);
+        }
+    }
+
+    private void handleStrictSequence(String regex) {
+        String[] states = regex.replaceAll("[()]", "").split(" ");
+        for (int i = 0; i < states.length - 1; i++) {
+            transitions.computeIfAbsent(states[i], k -> new HashSet<>()).add(states[i + 1]);
+        }
+    }
+
+    private void handleFlexibleSequence(String regex) {
+        String[] parts = regex.replaceAll("[()]", "").split("\\.\\*");
+        for (int i = 0; i < parts.length - 1; i++) {
+            transitions.computeIfAbsent(parts[i].trim(), k -> new HashSet<>()).add(parts[i + 1].trim());
+        }
+    }
+
+    private void handleComplexConditions(String regex) {
+        String[] parts = regex.split("->");
+        String[] conditions = parts[0].replaceAll("[()]", "").split("&|\\|");
+        String targetState = parts[1].trim();
+        boolean isAndCondition = parts[0].contains("&");
+
+        if (isAndCondition) {
+            preconditions.put(targetState, new HashSet<>(Arrays.asList(conditions)));
+        } else {
+            for (String condition : conditions) {
+                transitions.computeIfAbsent(condition.trim(), k -> new HashSet<>()).add(targetState);
+            }
+        }
+    }
+
+    private void handleRepetitions(String regex) {
+        String[] parts = regex.split("->");
+        String state = parts[0].replaceAll("\\{.*?\\}", "").trim();
+        String targetState = parts[1].trim();
+
+        transitions.computeIfAbsent(state, k -> new HashSet<>()).add(targetState);
+
+        String repetitionCount = parts[0].substring(parts[0].indexOf("{") + 1, parts[0].indexOf("}"));
+        executionCounts.put(state, Integer.parseInt(repetitionCount));
+    }
+
+    private String determineFinalState(String regex) {
+        String[] states = regex.replaceAll("[()]", "").split(" ");
+        return states[states.length - 1];
+    }
+
+    public boolean validateTransition(String methodName) {
+        System.out.println("[INFO] Validating transition for method: " + methodName);
+
+        if (currentState == null) {
+            if (!transitions.containsKey(methodName) && !preconditions.containsKey(methodName)) {
+                throw new IllegalStateException("Invalid starting state: " + methodName);
+            }
+            currentState = methodName;
+            completedStates.add(methodName);
+            System.out.println("[INFO] Transition valid. Current state set to: " + currentState);
+            return true;
+        }
+
+        // Validar precondiciones (AND)
+        if (preconditions.containsKey(methodName)) {
+            Set<String> requiredStates = preconditions.get(methodName);
+            if (completedStates.containsAll(requiredStates)) {
+                currentState = methodName;
+                completedStates.add(methodName);
+                System.out.println("[INFO] Transition valid after satisfying preconditions. Current state updated to: " + currentState);
+                return true;
+            } else {
+                throw new IllegalStateException("Preconditions not met for state: " + methodName);
+            }
+        }
+
+        // Validar transiciones simples
+        Set<String> validTransitions = transitions.get(currentState);
+        if (validTransitions != null && validTransitions.contains(methodName)) {
+            currentState = methodName;
+            completedStates.add(methodName);
+            if (executionCounts.containsKey(methodName)) {
+                executionCounts.put(methodName, executionCounts.get(methodName) - 1);
+                if (executionCounts.get(methodName) == 0) {
+                    executionCounts.remove(methodName);
+                }
+            }
+            System.out.println("[INFO] Transition valid. Current state updated to: " + currentState);
+            return true;
+        }
+
+        throw new IllegalStateException("Invalid transition from " + currentState + " to " + methodName);
+    }
+
+    public boolean isInFinalState() {
+        return finalState.equals(currentState) && executionCounts.isEmpty();
+    }
+
+    public String getCurrentState() {
+        return currentState;
+    }
+
+    public Map<String, Set<String>> getTransitions() {
+        return transitions;
+    }
+}
+```
+
+---
+
+### Cambios Realizados:
+
+1. **Condiciones AND (`testAndCondition`):**
+   - Implementé validación de precondiciones para estados dependientes de múltiples estados (AND). Los estados requeridos se almacenan en `preconditions`.
+
+2. **Repeticiones (`testRepetition`):**
+   - Aseguré que las repeticiones decrezcan correctamente en `executionCounts` durante las transiciones válidas.
+
+3. **Errores de Inicio:**
+   - Validé tanto en `transitions` como en `preconditions` para manejar correctamente casos complejos como AND y repeticiones.
+
+---
+
+### Siguientes Pasos:
+Ejecuta nuevamente los tests y verifica los resultados. Si otros errores persisten, puedo seguir ajustando las implementaciones restantes o depurando casos específicos.

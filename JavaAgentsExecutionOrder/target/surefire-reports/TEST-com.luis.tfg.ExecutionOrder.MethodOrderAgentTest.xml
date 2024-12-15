@@ -1,0 +1,1804 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.luis.tfg.ExecutionOrder.MethodOrderAgentTest" time="0.381" tests="26" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="sun.desktop" value="gnome"/>
+    <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
+    <property name="java.specification.version" value="11"/>
+    <property name="sun.cpu.isalist" value=""/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/usr/share/maven/boot/plexus-classworlds-2.x.jar"/>
+    <property name="forkCount" value="0"/>
+    <property name="java.vm.vendor" value="Ubuntu"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://ubuntu.com/"/>
+    <property name="user.timezone" value="Europe/Madrid"/>
+    <property name="maven.conf" value="/usr/share/maven/conf"/>
+    <property name="os.name" value="Linux"/>
+    <property name="java.vm.specification.version" value="11"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="ES"/>
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/java-11-openjdk-amd64/lib"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean test -DforkCount=0"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="maven.home" value="/usr/share/maven"/>
+    <property name="surefire.test.class.path" value="/home/luis/eclipse-workspace1/JavaAgentsExecutionOrder/target/test-classes:/home/luis/eclipse-workspace1/JavaAgentsExecutionOrder/target/classes:/home/luis/.m2/repository/net/bytebuddy/byte-buddy/1.14.6/byte-buddy-1.14.6.jar:/home/luis/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.6/byte-buddy-agent-1.14.6.jar:/home/luis/.m2/repository/org/junit/jupiter/junit-jupiter/5.8.2/junit-jupiter-5.8.2.jar:/home/luis/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.8.2/junit-jupiter-api-5.8.2.jar:/home/luis/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/luis/.m2/repository/org/junit/platform/junit-platform-commons/1.8.2/junit-platform-commons-1.8.2.jar:/home/luis/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/luis/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.8.2/junit-jupiter-params-5.8.2.jar:/home/luis/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.8.2/junit-jupiter-engine-5.8.2.jar:/home/luis/.m2/repository/org/junit/platform/junit-platform-engine/1.8.2/junit-platform-engine-1.8.2.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/home/luis"/>
+    <property name="user.language" value="es"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2024-10-15"/>
+    <property name="java.home" value="/usr/lib/jvm/java-11-openjdk-amd64"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/home/luis/eclipse-workspace1/JavaAgentsExecutionOrder"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="11.0.25+9-post-Ubuntu-1ubuntu122.04"/>
+    <property name="user.name" value="luis"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="6.8.0-49-generic"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="localRepository" value="/home/luis/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://bugs.launchpad.net/ubuntu/+source/openjdk-lts"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="java.version" value="11.0.25"/>
+    <property name="user.dir" value="/home/luis/eclipse-workspace1/JavaAgentsExecutionOrder"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="maven.multiModuleProjectDirectory" value="/home/luis/eclipse-workspace1/JavaAgentsExecutionOrder"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Ubuntu"/>
+    <property name="java.vm.version" value="11.0.25+9-post-Ubuntu-1ubuntu122.04"/>
+    <property name="java.specification.maintenance.version" value="3"/>
+    <property name="classworlds.conf" value="/usr/share/maven/bin/m2.conf"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="library.jansi.path" value="/usr/share/maven/lib/jansi-native"/>
+    <property name="java.class.version" value="55.0"/>
+  </properties>
+  <testcase name="testAndCondition2" classname="com.luis.tfg.ExecutionOrder.MethodOrderAgentTest" time="0.052">
+    <system-out><![CDATA[[INFO] Registering StateMachine for instance: TestClass{id='id12'}
+[INFO] Initializing StateMachine with regex: (process & start) -> end
+[DEBUG] Full regex: (process & start) -> end
+[DEBUG] Main regex: (process & start) -> end
+[DEBUG] Special transitions: null
+[DEBUG] Initial state: INITIAL
+[DEBUG] Declared final state: end
+[DEBUG] Processing segment: (process & start)
+[DEBUG] Handling complex segment: (process & start)
+[DEBUG] Detected AND condition. Segment: (process & start)
+[DEBUG] AND-Condition Transitions Configured:
+  INITIAL -> [process, start]
+  process -> [start]
+  start -> [process]
+  start, process -> [end]
+[DEBUG] Processing segment: end
+[DEBUG] Added transition from INITIAL to end
+[DEBUG] Connected final state: end to FINAL
+[DEBUG] Complete StateMachine transitions:
+State process transitions to: [com.luis.tfg.ExecutionOrder.State@f310675]
+State dbdfca22-3a34-4f92-8981-68eda5f3f849 transitions to: [com.luis.tfg.ExecutionOrder.State@424ec990]
+State start transitions to: [com.luis.tfg.ExecutionOrder.State@2c06e145]
+State INITIAL transitions to: [com.luis.tfg.ExecutionOrder.State@3b780b5c, com.luis.tfg.ExecutionOrder.State@3c7db0e8, com.luis.tfg.ExecutionOrder.State@424ec990]
+State end transitions to: [com.luis.tfg.ExecutionOrder.State@84becbe]
+State FINAL transitions to: []
+State 66a36495-4688-4368-8672-0baf27ac50bd transitions to: [com.luis.tfg.ExecutionOrder.State@424ec990]
+[DEBUG] Complete StateMachine transitions:
+State process transitions to: [com.luis.tfg.ExecutionOrder.State@f310675]
+State dbdfca22-3a34-4f92-8981-68eda5f3f849 transitions to: [com.luis.tfg.ExecutionOrder.State@424ec990]
+State start transitions to: [com.luis.tfg.ExecutionOrder.State@2c06e145]
+State INITIAL transitions to: [com.luis.tfg.ExecutionOrder.State@3b780b5c, com.luis.tfg.ExecutionOrder.State@3c7db0e8, com.luis.tfg.ExecutionOrder.State@424ec990]
+State end transitions to: [com.luis.tfg.ExecutionOrder.State@84becbe]
+State FINAL transitions to: []
+State 66a36495-4688-4368-8672-0baf27ac50bd transitions to: [com.luis.tfg.ExecutionOrder.State@424ec990]
+[INFO] StateMachine registered for instance: TestClass{id='id12'} with transitions: {process=[66a36495-4688-4368-8672-0baf27ac50bd], dbdfca22-3a34-4f92-8981-68eda5f3f849=[end], start=[dbdfca22-3a34-4f92-8981-68eda5f3f849], INITIAL=[process, start, end], end=[FINAL], 66a36495-4688-4368-8672-0baf27ac50bd=[end]}
+[INFO] Current StateMachineMap content:
+    Instance: TestClass{id='id12'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@6885f3f7
+[INFO] Fetching StateMachine for instance: TestClass{id='id12'}
+[INFO] StateMachine fetched for instance: TestClass{id='id12'}
+[INFO] Transition valid. Current state updated to: start
+[INFO] Transition valid. Current state updated to: dbdfca22-3a34-4f92-8981-68eda5f3f849
+[INFO] Transition valid. Current state updated to: end
+]]></system-out>
+  </testcase>
+  <testcase name="testNoRedundantTransitionsFromInitial" classname="com.luis.tfg.ExecutionOrder.MethodOrderAgentTest" time="0.008">
+    <system-out><![CDATA[[INFO] Registering StateMachine for instance: TestClass{id='id22'}
+[INFO] Initializing StateMachine with regex: (start process end)
+[DEBUG] Full regex: (start process end)
+[DEBUG] Main regex: (start process end)
+[DEBUG] Special transitions: null
+[DEBUG] Initial state: INITIAL
+[DEBUG] Declared final state: end
+[DEBUG] Processing segment: (start
+[DEBUG] Added transition from INITIAL to start
+[DEBUG] Processing segment: process
+[DEBUG] Added transition from start to process
+[DEBUG] Processing segment: end)
+[DEBUG] Added transition from process to end
+[DEBUG] Connected final state: end to FINAL
+[DEBUG] Complete StateMachine transitions:
+State process transitions to: [com.luis.tfg.ExecutionOrder.State@18c0f025]
+State start transitions to: [com.luis.tfg.ExecutionOrder.State@684f7f1c]
+State INITIAL transitions to: [com.luis.tfg.ExecutionOrder.State@6a013bdd]
+State end transitions to: [com.luis.tfg.ExecutionOrder.State@5e0bba2f]
+State FINAL transitions to: []
+[DEBUG] Complete StateMachine transitions:
+State process transitions to: [com.luis.tfg.ExecutionOrder.State@18c0f025]
+State start transitions to: [com.luis.tfg.ExecutionOrder.State@684f7f1c]
+State INITIAL transitions to: [com.luis.tfg.ExecutionOrder.State@6a013bdd]
+State end transitions to: [com.luis.tfg.ExecutionOrder.State@5e0bba2f]
+State FINAL transitions to: []
+[INFO] StateMachine registered for instance: TestClass{id='id22'} with transitions: {process=[end], start=[process], INITIAL=[start], end=[FINAL]}
+[INFO] Current StateMachineMap content:
+    Instance: TestClass{id='id12'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@6885f3f7
+    Instance: TestClass{id='id22'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@41d53813
+[INFO] Fetching StateMachine for instance: TestClass{id='id22'}
+[INFO] StateMachine fetched for instance: TestClass{id='id22'}
+]]></system-out>
+  </testcase>
+  <testcase name="testOrAndCombination" classname="com.luis.tfg.ExecutionOrder.MethodOrderAgentTest" time="0.015">
+    <system-out><![CDATA[[TEST] Starting testOrAndCombination
+[INFO] Registering StateMachine for instance: TestClass{id='id-or-and'}
+[INFO] Initializing StateMachine with regex: ((start | process) & end) -> FINAL
+[DEBUG] Full regex: ((start | process) & end) -> FINAL
+[DEBUG] Main regex: ((start | process) & end) -> FINAL
+[DEBUG] Special transitions: null
+[DEBUG] Initial state: INITIAL
+[DEBUG] Declared final state: FINAL
+[DEBUG] Processing segment: ((start | process) & end)
+[DEBUG] Handling complex segment: ((start | process) & end)
+[DEBUG] Detected OR-AND combination
+[DEBUG] Entering handleOrAndCondition
+[DEBUG] Initial state: INITIAL
+[DEBUG] Final state: FINAL
+[DEBUG] Segment: ((start | process) & end)
+[DEBUG] Transitions Configured:
+  INITIAL -> [start, process, end]
+  start -> [end]
+  process -> [end]
+  end -> [start, process, FINAL]
+[DEBUG] Processing segment: FINAL
+[DEBUG] Added transition from INITIAL to FINAL
+[DEBUG] Complete StateMachine transitions:
+State process transitions to: [com.luis.tfg.ExecutionOrder.State@4be3de36]
+State start transitions to: [com.luis.tfg.ExecutionOrder.State@4be3de36]
+State INITIAL transitions to: [com.luis.tfg.ExecutionOrder.State@5c03eb4e, com.luis.tfg.ExecutionOrder.State@6219006a, com.luis.tfg.ExecutionOrder.State@4be3de36, com.luis.tfg.ExecutionOrder.State@1e836aed]
+State end transitions to: [com.luis.tfg.ExecutionOrder.State@5c03eb4e, com.luis.tfg.ExecutionOrder.State@6219006a, com.luis.tfg.ExecutionOrder.State@1e836aed]
+State FINAL transitions to: []
+[DEBUG] Complete StateMachine transitions:
+State process transitions to: [com.luis.tfg.ExecutionOrder.State@4be3de36]
+State start transitions to: [com.luis.tfg.ExecutionOrder.State@4be3de36]
+State INITIAL transitions to: [com.luis.tfg.ExecutionOrder.State@5c03eb4e, com.luis.tfg.ExecutionOrder.State@6219006a, com.luis.tfg.ExecutionOrder.State@4be3de36, com.luis.tfg.ExecutionOrder.State@1e836aed]
+State end transitions to: [com.luis.tfg.ExecutionOrder.State@5c03eb4e, com.luis.tfg.ExecutionOrder.State@6219006a, com.luis.tfg.ExecutionOrder.State@1e836aed]
+State FINAL transitions to: []
+[INFO] StateMachine registered for instance: TestClass{id='id-or-and'} with transitions: {process=[end], start=[end], INITIAL=[process, start, end, FINAL], end=[process, start, FINAL]}
+[INFO] Current StateMachineMap content:
+    Instance: TestClass{id='id12'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@6885f3f7
+    Instance: TestClass{id='id22'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@41d53813
+    Instance: TestClass{id='id-or-and'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@4bc41565
+[INFO] Fetching StateMachine for instance: TestClass{id='id-or-and'}
+[INFO] StateMachine fetched for instance: TestClass{id='id-or-and'}
+[INFO] Transition valid. Current state updated to: start
+[INFO] Transition valid. Current state updated to: end
+[INFO] Transition valid. Current state updated to: FINAL
+[INFO] handleSpecialFinalTransitions from FINAL
+Allow from final: true
+[ERROR] Transition attempted from final state: FINAL
+[TEST] Finished testOrAndCombination
+]]></system-out>
+  </testcase>
+  <testcase name="testNoTransitionsFromFinalState" classname="com.luis.tfg.ExecutionOrder.MethodOrderAgentTest" time="0.008">
+    <system-out><![CDATA[[INFO] Registering StateMachine for instance: TestClass{id='id26'}
+[INFO] Initializing StateMachine with regex: (start process end) -> FINAL
+[DEBUG] Full regex: (start process end) -> FINAL
+[DEBUG] Main regex: (start process end) -> FINAL
+[DEBUG] Special transitions: null
+[DEBUG] Initial state: INITIAL
+[DEBUG] Declared final state: FINAL
+[DEBUG] Processing segment: (start process end)
+[DEBUG] Added transition from INITIAL to start
+[DEBUG] Added transition from start to process
+[DEBUG] Added transition from process to end
+[DEBUG] Processing segment: FINAL
+[DEBUG] Added transition from end to FINAL
+[DEBUG] Complete StateMachine transitions:
+State process transitions to: [com.luis.tfg.ExecutionOrder.State@28ceb25e]
+State start transitions to: [com.luis.tfg.ExecutionOrder.State@2e09e367]
+State INITIAL transitions to: [com.luis.tfg.ExecutionOrder.State@518a7b8a]
+State end transitions to: [com.luis.tfg.ExecutionOrder.State@5a24390b]
+State FINAL transitions to: []
+[DEBUG] Complete StateMachine transitions:
+State process transitions to: [com.luis.tfg.ExecutionOrder.State@28ceb25e]
+State start transitions to: [com.luis.tfg.ExecutionOrder.State@2e09e367]
+State INITIAL transitions to: [com.luis.tfg.ExecutionOrder.State@518a7b8a]
+State end transitions to: [com.luis.tfg.ExecutionOrder.State@5a24390b]
+State FINAL transitions to: []
+[INFO] StateMachine registered for instance: TestClass{id='id26'} with transitions: {process=[end], start=[process], INITIAL=[start], end=[FINAL]}
+[INFO] Current StateMachineMap content:
+    Instance: TestClass{id='id12'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@6885f3f7
+    Instance: TestClass{id='id22'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@41d53813
+    Instance: TestClass{id='id-or-and'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@4bc41565
+    Instance: TestClass{id='id26'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@7253c53
+[INFO] Fetching StateMachine for instance: TestClass{id='id26'}
+[INFO] StateMachine fetched for instance: TestClass{id='id26'}
+[INFO] Transition valid. Current state updated to: start
+[INFO] Transition valid. Current state updated to: process
+[INFO] Transition valid. Current state updated to: end
+[INFO] Transition valid. Current state updated to: FINAL
+[INFO] handleSpecialFinalTransitions from FINAL
+Allow from final: true
+[ERROR] Transition attempted from final state: FINAL
+]]></system-out>
+  </testcase>
+  <testcase name="testSpecialFinalTransitions" classname="com.luis.tfg.ExecutionOrder.MethodOrderAgentTest" time="0.008">
+    <system-out><![CDATA[[TEST] Starting testSpecialFinalTransitions
+[INFO] Registering StateMachine for instance: TestClass{id='id-special-final'}
+[INFO] Initializing StateMachine with regex: start -> end [end:fun1,fun2]
+[DEBUG] Full regex: start -> end [end:fun1,fun2]
+[DEBUG] Main regex: start -> end
+[DEBUG] Special transitions: end:fun1,fun2
+[DEBUG] Initial state: INITIAL
+[DEBUG] Declared final state: end
+[DEBUG] Processing segment: start
+[DEBUG] Added transition from INITIAL to start
+[DEBUG] Processing segment: end
+[DEBUG] Added transition from start to end
+[INFO] Special transitions configured for state 'end':
+  - fun1
+  - fun2
+[DEBUG] Connected final state: end to FINAL
+[DEBUG] Complete StateMachine transitions:
+State start transitions to: [com.luis.tfg.ExecutionOrder.State@66d6e50b]
+State INITIAL transitions to: [com.luis.tfg.ExecutionOrder.State@64829470]
+State end transitions to: [com.luis.tfg.ExecutionOrder.State@1f95158a]
+State FINAL transitions to: []
+[DEBUG] Complete StateMachine transitions:
+State start transitions to: [com.luis.tfg.ExecutionOrder.State@66d6e50b]
+State INITIAL transitions to: [com.luis.tfg.ExecutionOrder.State@64829470]
+State end transitions to: [com.luis.tfg.ExecutionOrder.State@1f95158a]
+State FINAL transitions to: []
+[INFO] StateMachine registered for instance: TestClass{id='id-special-final'} with transitions: {start=[end], INITIAL=[start], end=[FINAL]}
+[INFO] Current StateMachineMap content:
+    Instance: TestClass{id='id-special-final'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@31fc658f
+    Instance: TestClass{id='id12'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@6885f3f7
+    Instance: TestClass{id='id22'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@41d53813
+    Instance: TestClass{id='id-or-and'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@4bc41565
+    Instance: TestClass{id='id26'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@7253c53
+[INFO] Fetching StateMachine for instance: TestClass{id='id-special-final'}
+[INFO] StateMachine fetched for instance: TestClass{id='id-special-final'}
+[INFO] Transition valid. Current state updated to: start
+[INFO] Transition valid. Current state updated to: end
+[INFO] handleSpecialFinalTransitions form FINAL STATE
+Allow from final: false
+[INFO] Valid special transition: fun1
+[INFO] handleSpecialFinalTransitions form FINAL STATE
+Allow from final: false
+[INFO] Valid special transition: fun2
+[INFO] handleSpecialFinalTransitions form FINAL STATE
+Allow from final: false
+[TEST] Finished testSpecialFinalTransitions
+]]></system-out>
+  </testcase>
+  <testcase name="testStateMachineNotFound" classname="com.luis.tfg.ExecutionOrder.MethodOrderAgentTest" time="0.002">
+    <system-out><![CDATA[[TEST] Starting testStateMachineNotFound
+[INFO] Fetching StateMachine for instance: TestClass{id='id4'}
+[ERROR] StateMachine NOT FOUND for instance: TestClass{id='id4'}
+[TEST] Finished testStateMachineNotFound
+]]></system-out>
+  </testcase>
+  <testcase name="testValidOrder" classname="com.luis.tfg.ExecutionOrder.MethodOrderAgentTest" time="0.006">
+    <system-out><![CDATA[[INFO] Registering StateMachine for instance: TestClass{id='id1'}
+[INFO] Initializing StateMachine with regex: (start process end)
+[DEBUG] Full regex: (start process end)
+[DEBUG] Main regex: (start process end)
+[DEBUG] Special transitions: null
+[DEBUG] Initial state: INITIAL
+[DEBUG] Declared final state: end
+[DEBUG] Processing segment: (start
+[DEBUG] Added transition from INITIAL to start
+[DEBUG] Processing segment: process
+[DEBUG] Added transition from start to process
+[DEBUG] Processing segment: end)
+[DEBUG] Added transition from process to end
+[DEBUG] Connected final state: end to FINAL
+[DEBUG] Complete StateMachine transitions:
+State process transitions to: [com.luis.tfg.ExecutionOrder.State@c247363]
+State start transitions to: [com.luis.tfg.ExecutionOrder.State@c6d7256]
+State INITIAL transitions to: [com.luis.tfg.ExecutionOrder.State@48188d23]
+State end transitions to: [com.luis.tfg.ExecutionOrder.State@4860627a]
+State FINAL transitions to: []
+[DEBUG] Complete StateMachine transitions:
+State process transitions to: [com.luis.tfg.ExecutionOrder.State@c247363]
+State start transitions to: [com.luis.tfg.ExecutionOrder.State@c6d7256]
+State INITIAL transitions to: [com.luis.tfg.ExecutionOrder.State@48188d23]
+State end transitions to: [com.luis.tfg.ExecutionOrder.State@4860627a]
+State FINAL transitions to: []
+[INFO] StateMachine registered for instance: TestClass{id='id1'} with transitions: {process=[end], start=[process], INITIAL=[start], end=[FINAL]}
+[INFO] Current StateMachineMap content:
+    Instance: TestClass{id='id1'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@67f0bf7e
+    Instance: TestClass{id='id-special-final'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@31fc658f
+    Instance: TestClass{id='id12'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@6885f3f7
+    Instance: TestClass{id='id22'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@41d53813
+    Instance: TestClass{id='id-or-and'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@4bc41565
+    Instance: TestClass{id='id26'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@7253c53
+[INFO] Fetching StateMachine for instance: TestClass{id='id1'}
+[INFO] StateMachine fetched for instance: TestClass{id='id1'}
+[INFO] Transition valid. Current state updated to: start
+[INFO] Transition valid. Current state updated to: process
+[INFO] Transition valid. Current state updated to: end
+]]></system-out>
+  </testcase>
+  <testcase name="testAndCondition" classname="com.luis.tfg.ExecutionOrder.MethodOrderAgentTest" time="0.009">
+    <system-out><![CDATA[[INFO] Registering StateMachine for instance: TestClass{id='id6'}
+[INFO] Initializing StateMachine with regex: (start & process) -> end
+[DEBUG] Full regex: (start & process) -> end
+[DEBUG] Main regex: (start & process) -> end
+[DEBUG] Special transitions: null
+[DEBUG] Initial state: INITIAL
+[DEBUG] Declared final state: end
+[DEBUG] Processing segment: (start & process)
+[DEBUG] Handling complex segment: (start & process)
+[DEBUG] Detected AND condition. Segment: (start & process)
+[DEBUG] AND-Condition Transitions Configured:
+  INITIAL -> [start, process]
+  start -> [process]
+  process -> [start]
+  process, start -> [end]
+[DEBUG] Processing segment: end
+[DEBUG] Added transition from INITIAL to end
+[DEBUG] Connected final state: end to FINAL
+[DEBUG] Complete StateMachine transitions:
+State 9253b7fa-36ae-4e95-9efb-4c9fb16149ba transitions to: [com.luis.tfg.ExecutionOrder.State@e88e14]
+State process transitions to: [com.luis.tfg.ExecutionOrder.State@c157abf]
+State start transitions to: [com.luis.tfg.ExecutionOrder.State@472dbaf5]
+State INITIAL transitions to: [com.luis.tfg.ExecutionOrder.State@25c4f621, com.luis.tfg.ExecutionOrder.State@619854a3, com.luis.tfg.ExecutionOrder.State@e88e14]
+State d49a502b-da7c-4932-b54c-1a57af154b8e transitions to: [com.luis.tfg.ExecutionOrder.State@e88e14]
+State end transitions to: [com.luis.tfg.ExecutionOrder.State@46ff1aad]
+State FINAL transitions to: []
+[DEBUG] Complete StateMachine transitions:
+State 9253b7fa-36ae-4e95-9efb-4c9fb16149ba transitions to: [com.luis.tfg.ExecutionOrder.State@e88e14]
+State process transitions to: [com.luis.tfg.ExecutionOrder.State@c157abf]
+State start transitions to: [com.luis.tfg.ExecutionOrder.State@472dbaf5]
+State INITIAL transitions to: [com.luis.tfg.ExecutionOrder.State@25c4f621, com.luis.tfg.ExecutionOrder.State@619854a3, com.luis.tfg.ExecutionOrder.State@e88e14]
+State d49a502b-da7c-4932-b54c-1a57af154b8e transitions to: [com.luis.tfg.ExecutionOrder.State@e88e14]
+State end transitions to: [com.luis.tfg.ExecutionOrder.State@46ff1aad]
+State FINAL transitions to: []
+[INFO] StateMachine registered for instance: TestClass{id='id6'} with transitions: {9253b7fa-36ae-4e95-9efb-4c9fb16149ba=[end], process=[9253b7fa-36ae-4e95-9efb-4c9fb16149ba], start=[d49a502b-da7c-4932-b54c-1a57af154b8e], INITIAL=[process, start, end], d49a502b-da7c-4932-b54c-1a57af154b8e=[end], end=[FINAL]}
+[INFO] Current StateMachineMap content:
+    Instance: TestClass{id='id1'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@67f0bf7e
+    Instance: TestClass{id='id-special-final'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@31fc658f
+    Instance: TestClass{id='id12'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@6885f3f7
+    Instance: TestClass{id='id22'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@41d53813
+    Instance: TestClass{id='id-or-and'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@4bc41565
+    Instance: TestClass{id='id6'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@6c2fea95
+    Instance: TestClass{id='id26'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@7253c53
+[INFO] Fetching StateMachine for instance: TestClass{id='id6'}
+[INFO] StateMachine fetched for instance: TestClass{id='id6'}
+[INFO] Transition valid. Current state updated to: start
+[INFO] Transition valid. Current state updated to: d49a502b-da7c-4932-b54c-1a57af154b8e
+[INFO] Transition valid. Current state updated to: end
+]]></system-out>
+  </testcase>
+  <testcase name="testMultipleOrTransitions" classname="com.luis.tfg.ExecutionOrder.MethodOrderAgentTest" time="0.011">
+    <system-out><![CDATA[[INFO] Registering StateMachine for instance: TestClass{id='id24'}
+[INFO] Initializing StateMachine with regex: (start | process) -> end -> FINAL
+[DEBUG] Full regex: (start | process) -> end -> FINAL
+[DEBUG] Main regex: (start | process) -> end -> FINAL
+[DEBUG] Special transitions: null
+[DEBUG] Initial state: INITIAL
+[DEBUG] Declared final state: FINAL
+[DEBUG] Processing segment: (start | process)
+[DEBUG] Handling complex segment: (start | process)
+[DEBUG] Detected OR condition. Segment: (start | process)
+[DEBUG] OR condition: INITIAL -> [start]
+[DEBUG] start -> [end]
+[DEBUG] OR condition: INITIAL -> [process]
+[DEBUG] process -> [end]
+[DEBUG] Processing segment: end
+[DEBUG] Added transition from INITIAL to end
+[DEBUG] Processing segment: FINAL
+[DEBUG] Added transition from end to FINAL
+[DEBUG] Complete StateMachine transitions:
+State process transitions to: [com.luis.tfg.ExecutionOrder.State@4d4600fb]
+State start transitions to: [com.luis.tfg.ExecutionOrder.State@4d4600fb]
+State INITIAL transitions to: [com.luis.tfg.ExecutionOrder.State@7352418c, com.luis.tfg.ExecutionOrder.State@60ba6631, com.luis.tfg.ExecutionOrder.State@4d4600fb]
+State end transitions to: [com.luis.tfg.ExecutionOrder.State@4d2950ed]
+State FINAL transitions to: []
+[DEBUG] Complete StateMachine transitions:
+State process transitions to: [com.luis.tfg.ExecutionOrder.State@4d4600fb]
+State start transitions to: [com.luis.tfg.ExecutionOrder.State@4d4600fb]
+State INITIAL transitions to: [com.luis.tfg.ExecutionOrder.State@7352418c, com.luis.tfg.ExecutionOrder.State@60ba6631, com.luis.tfg.ExecutionOrder.State@4d4600fb]
+State end transitions to: [com.luis.tfg.ExecutionOrder.State@4d2950ed]
+State FINAL transitions to: []
+[INFO] StateMachine registered for instance: TestClass{id='id24'} with transitions: {process=[end], start=[end], INITIAL=[process, start, end], end=[FINAL]}
+[INFO] Current StateMachineMap content:
+    Instance: TestClass{id='id1'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@67f0bf7e
+    Instance: TestClass{id='id-special-final'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@31fc658f
+    Instance: TestClass{id='id12'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@6885f3f7
+    Instance: TestClass{id='id22'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@41d53813
+    Instance: TestClass{id='id-or-and'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@4bc41565
+    Instance: TestClass{id='id6'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@6c2fea95
+    Instance: TestClass{id='id24'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@3095d06b
+    Instance: TestClass{id='id26'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@7253c53
+[INFO] Fetching StateMachine for instance: TestClass{id='id24'}
+[INFO] StateMachine fetched for instance: TestClass{id='id24'}
+[INFO] Transition valid. Current state updated to: start
+[INFO] Transition valid. Current state updated to: end
+[INFO] Transition valid. Current state updated to: FINAL
+[INFO] handleSpecialFinalTransitions from FINAL
+Allow from final: true
+[ERROR] Transition attempted from final state: FINAL
+]]></system-out>
+  </testcase>
+  <testcase name="testNotEndingInFinalState" classname="com.luis.tfg.ExecutionOrder.MethodOrderAgentTest" time="0.008">
+    <system-out><![CDATA[[TEST] Starting testNotEndingInFinalState
+[INFO] Registering StateMachine for instance: TestClass{id='id2'}
+[INFO] Initializing StateMachine with regex: (start process end)
+[DEBUG] Full regex: (start process end)
+[DEBUG] Main regex: (start process end)
+[DEBUG] Special transitions: null
+[DEBUG] Initial state: INITIAL
+[DEBUG] Declared final state: end
+[DEBUG] Processing segment: (start
+[DEBUG] Added transition from INITIAL to start
+[DEBUG] Processing segment: process
+[DEBUG] Added transition from start to process
+[DEBUG] Processing segment: end)
+[DEBUG] Added transition from process to end
+[DEBUG] Connected final state: end to FINAL
+[DEBUG] Complete StateMachine transitions:
+State process transitions to: [com.luis.tfg.ExecutionOrder.State@51aaa9d4]
+State start transitions to: [com.luis.tfg.ExecutionOrder.State@6292c63e]
+State INITIAL transitions to: [com.luis.tfg.ExecutionOrder.State@65bb4cb9]
+State end transitions to: [com.luis.tfg.ExecutionOrder.State@7b33deed]
+State FINAL transitions to: []
+[DEBUG] Complete StateMachine transitions:
+State process transitions to: [com.luis.tfg.ExecutionOrder.State@51aaa9d4]
+State start transitions to: [com.luis.tfg.ExecutionOrder.State@6292c63e]
+State INITIAL transitions to: [com.luis.tfg.ExecutionOrder.State@65bb4cb9]
+State end transitions to: [com.luis.tfg.ExecutionOrder.State@7b33deed]
+State FINAL transitions to: []
+[INFO] StateMachine registered for instance: TestClass{id='id2'} with transitions: {process=[end], start=[process], INITIAL=[start], end=[FINAL]}
+[INFO] Current StateMachineMap content:
+    Instance: TestClass{id='id1'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@67f0bf7e
+    Instance: TestClass{id='id-special-final'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@31fc658f
+    Instance: TestClass{id='id2'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@7fd32c56
+    Instance: TestClass{id='id12'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@6885f3f7
+    Instance: TestClass{id='id22'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@41d53813
+    Instance: TestClass{id='id-or-and'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@4bc41565
+    Instance: TestClass{id='id6'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@6c2fea95
+    Instance: TestClass{id='id24'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@3095d06b
+    Instance: TestClass{id='id26'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@7253c53
+[INFO] Fetching StateMachine for instance: TestClass{id='id2'}
+[INFO] StateMachine fetched for instance: TestClass{id='id2'}
+[INFO] Transition valid. Current state updated to: start
+[INFO] Transition valid. Current state updated to: process
+[TEST] Finished testNotEndingInFinalState
+]]></system-out>
+  </testcase>
+  <testcase name="testInvalidRepeatedTransition" classname="com.luis.tfg.ExecutionOrder.MethodOrderAgentTest" time="0.008">
+    <system-out><![CDATA[[INFO] Registering StateMachine for instance: TestClass{id='id23'}
+[INFO] Initializing StateMachine with regex: (start process end)
+[DEBUG] Full regex: (start process end)
+[DEBUG] Main regex: (start process end)
+[DEBUG] Special transitions: null
+[DEBUG] Initial state: INITIAL
+[DEBUG] Declared final state: end
+[DEBUG] Processing segment: (start
+[DEBUG] Added transition from INITIAL to start
+[DEBUG] Processing segment: process
+[DEBUG] Added transition from start to process
+[DEBUG] Processing segment: end)
+[DEBUG] Added transition from process to end
+[DEBUG] Connected final state: end to FINAL
+[DEBUG] Complete StateMachine transitions:
+State process transitions to: [com.luis.tfg.ExecutionOrder.State@3713bedc]
+State start transitions to: [com.luis.tfg.ExecutionOrder.State@198c0f1c]
+State INITIAL transitions to: [com.luis.tfg.ExecutionOrder.State@29d33f1]
+State end transitions to: [com.luis.tfg.ExecutionOrder.State@77e5c765]
+State FINAL transitions to: []
+[DEBUG] Complete StateMachine transitions:
+State process transitions to: [com.luis.tfg.ExecutionOrder.State@3713bedc]
+State start transitions to: [com.luis.tfg.ExecutionOrder.State@198c0f1c]
+State INITIAL transitions to: [com.luis.tfg.ExecutionOrder.State@29d33f1]
+State end transitions to: [com.luis.tfg.ExecutionOrder.State@77e5c765]
+State FINAL transitions to: []
+[INFO] StateMachine registered for instance: TestClass{id='id23'} with transitions: {process=[end], start=[process], INITIAL=[start], end=[FINAL]}
+[INFO] Current StateMachineMap content:
+    Instance: TestClass{id='id1'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@67f0bf7e
+    Instance: TestClass{id='id-special-final'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@31fc658f
+    Instance: TestClass{id='id2'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@7fd32c56
+    Instance: TestClass{id='id12'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@6885f3f7
+    Instance: TestClass{id='id23'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@5daa621b
+    Instance: TestClass{id='id22'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@41d53813
+    Instance: TestClass{id='id-or-and'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@4bc41565
+    Instance: TestClass{id='id6'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@6c2fea95
+    Instance: TestClass{id='id24'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@3095d06b
+    Instance: TestClass{id='id26'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@7253c53
+[INFO] Fetching StateMachine for instance: TestClass{id='id23'}
+[INFO] StateMachine fetched for instance: TestClass{id='id23'}
+[INFO] Transition valid. Current state updated to: start
+]]></system-out>
+  </testcase>
+  <testcase name="testSpecialFinalTransitions2" classname="com.luis.tfg.ExecutionOrder.MethodOrderAgentTest" time="0.007">
+    <system-out><![CDATA[[TEST] Starting testSpecialFinalTransitions
+[INFO] Registering StateMachine for instance: TestClass{id='id-special-final2'}
+[INFO] Initializing StateMachine with regex: start -> end [end:+]
+[DEBUG] Full regex: start -> end [end:+]
+[DEBUG] Main regex: start -> end
+[DEBUG] Special transitions: end:+
+[DEBUG] Initial state: INITIAL
+[DEBUG] Declared final state: end
+[DEBUG] Processing segment: start
+[DEBUG] Added transition from INITIAL to start
+[DEBUG] Processing segment: end
+[DEBUG] Added transition from start to end
+[INFO] Special transitions configured for state 'end':
+  - +
+[DEBUG] Connected final state: end to FINAL
+[DEBUG] Complete StateMachine transitions:
+State start transitions to: [com.luis.tfg.ExecutionOrder.State@24a7725d]
+State INITIAL transitions to: [com.luis.tfg.ExecutionOrder.State@4fcedf83]
+State end transitions to: [com.luis.tfg.ExecutionOrder.State@16c9f7f0]
+State FINAL transitions to: []
+[DEBUG] Complete StateMachine transitions:
+State start transitions to: [com.luis.tfg.ExecutionOrder.State@24a7725d]
+State INITIAL transitions to: [com.luis.tfg.ExecutionOrder.State@4fcedf83]
+State end transitions to: [com.luis.tfg.ExecutionOrder.State@16c9f7f0]
+State FINAL transitions to: []
+[INFO] StateMachine registered for instance: TestClass{id='id-special-final2'} with transitions: {start=[end], INITIAL=[start], end=[FINAL]}
+[INFO] Current StateMachineMap content:
+    Instance: TestClass{id='id-special-final2'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@187df588
+    Instance: TestClass{id='id1'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@67f0bf7e
+    Instance: TestClass{id='id-special-final'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@31fc658f
+    Instance: TestClass{id='id2'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@7fd32c56
+    Instance: TestClass{id='id12'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@6885f3f7
+    Instance: TestClass{id='id23'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@5daa621b
+    Instance: TestClass{id='id22'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@41d53813
+    Instance: TestClass{id='id-or-and'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@4bc41565
+    Instance: TestClass{id='id6'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@6c2fea95
+    Instance: TestClass{id='id24'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@3095d06b
+    Instance: TestClass{id='id26'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@7253c53
+[INFO] Fetching StateMachine for instance: TestClass{id='id-special-final2'}
+[INFO] StateMachine fetched for instance: TestClass{id='id-special-final2'}
+[INFO] Transition valid. Current state updated to: start
+[INFO] Transition valid. Current state updated to: end
+[INFO] handleSpecialFinalTransitions form FINAL STATE
+Allow from final: false
+[INFO] Valid special transition: fun1
+[INFO] handleSpecialFinalTransitions form FINAL STATE
+Allow from final: false
+[INFO] Valid special transition: fun2
+[TEST] Finished testSpecialFinalTransitions
+]]></system-out>
+  </testcase>
+  <testcase name="testGetTransitions" classname="com.luis.tfg.ExecutionOrder.MethodOrderAgentTest" time="0.006">
+    <system-out><![CDATA[[TEST] Starting testGetTransitions
+[INFO] Registering StateMachine for instance: TestClass{id='id21'}
+[INFO] Initializing StateMachine with regex: (start process end -> FINAL)
+[DEBUG] Full regex: (start process end -> FINAL)
+[DEBUG] Main regex: (start process end -> FINAL)
+[DEBUG] Special transitions: null
+[DEBUG] Initial state: INITIAL
+[DEBUG] Declared final state: FINAL
+[DEBUG] Processing segment: (start process end
+[DEBUG] Added transition from INITIAL to start
+[DEBUG] Added transition from start to process
+[DEBUG] Added transition from process to end
+[DEBUG] Processing segment: FINAL)
+[DEBUG] Added transition from end to FINAL
+[DEBUG] Complete StateMachine transitions:
+State process transitions to: [com.luis.tfg.ExecutionOrder.State@7d75940]
+State start transitions to: [com.luis.tfg.ExecutionOrder.State@3e5cbcfe]
+State INITIAL transitions to: [com.luis.tfg.ExecutionOrder.State@6773bab2]
+State end transitions to: [com.luis.tfg.ExecutionOrder.State@1055d261]
+State FINAL transitions to: []
+[DEBUG] Complete StateMachine transitions:
+State process transitions to: [com.luis.tfg.ExecutionOrder.State@7d75940]
+State start transitions to: [com.luis.tfg.ExecutionOrder.State@3e5cbcfe]
+State INITIAL transitions to: [com.luis.tfg.ExecutionOrder.State@6773bab2]
+State end transitions to: [com.luis.tfg.ExecutionOrder.State@1055d261]
+State FINAL transitions to: []
+[INFO] StateMachine registered for instance: TestClass{id='id21'} with transitions: {process=[end], start=[process], INITIAL=[start], end=[FINAL]}
+[INFO] Current StateMachineMap content:
+    Instance: TestClass{id='id-special-final2'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@187df588
+    Instance: TestClass{id='id21'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@2d758472
+    Instance: TestClass{id='id12'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@6885f3f7
+    Instance: TestClass{id='id23'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@5daa621b
+    Instance: TestClass{id='id22'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@41d53813
+    Instance: TestClass{id='id24'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@3095d06b
+    Instance: TestClass{id='id26'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@7253c53
+    Instance: TestClass{id='id1'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@67f0bf7e
+    Instance: TestClass{id='id-special-final'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@31fc658f
+    Instance: TestClass{id='id2'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@7fd32c56
+    Instance: TestClass{id='id-or-and'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@4bc41565
+    Instance: TestClass{id='id6'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@6c2fea95
+[INFO] Fetching StateMachine for instance: TestClass{id='id21'}
+[INFO] StateMachine fetched for instance: TestClass{id='id21'}
+[TEST] Finished testGetTransitions
+]]></system-out>
+  </testcase>
+  <testcase name="testOrCondition2" classname="com.luis.tfg.ExecutionOrder.MethodOrderAgentTest" time="0.008">
+    <system-out><![CDATA[[TEST] Starting testOrCondition
+[INFO] Registering StateMachine for instance: TestClass{id='id72'}
+[INFO] Initializing StateMachine with regex: (process | start) -> end
+[DEBUG] Full regex: (process | start) -> end
+[DEBUG] Main regex: (process | start) -> end
+[DEBUG] Special transitions: null
+[DEBUG] Initial state: INITIAL
+[DEBUG] Declared final state: end
+[DEBUG] Processing segment: (process | start)
+[DEBUG] Handling complex segment: (process | start)
+[DEBUG] Detected OR condition. Segment: (process | start)
+[DEBUG] OR condition: INITIAL -> [process]
+[DEBUG] process -> [end]
+[DEBUG] OR condition: INITIAL -> [start]
+[DEBUG] start -> [end]
+[DEBUG] Processing segment: end
+[DEBUG] Added transition from INITIAL to end
+[DEBUG] Connected final state: end to FINAL
+[DEBUG] Complete StateMachine transitions:
+State process transitions to: [com.luis.tfg.ExecutionOrder.State@7615666e]
+State start transitions to: [com.luis.tfg.ExecutionOrder.State@7615666e]
+State INITIAL transitions to: [com.luis.tfg.ExecutionOrder.State@c49e434, com.luis.tfg.ExecutionOrder.State@32b1e906, com.luis.tfg.ExecutionOrder.State@7615666e]
+State end transitions to: [com.luis.tfg.ExecutionOrder.State@33e6bd36]
+State FINAL transitions to: []
+[DEBUG] Complete StateMachine transitions:
+State process transitions to: [com.luis.tfg.ExecutionOrder.State@7615666e]
+State start transitions to: [com.luis.tfg.ExecutionOrder.State@7615666e]
+State INITIAL transitions to: [com.luis.tfg.ExecutionOrder.State@c49e434, com.luis.tfg.ExecutionOrder.State@32b1e906, com.luis.tfg.ExecutionOrder.State@7615666e]
+State end transitions to: [com.luis.tfg.ExecutionOrder.State@33e6bd36]
+State FINAL transitions to: []
+[INFO] StateMachine registered for instance: TestClass{id='id72'} with transitions: {process=[end], start=[end], INITIAL=[process, start, end], end=[FINAL]}
+[INFO] Current StateMachineMap content:
+    Instance: TestClass{id='id-special-final2'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@187df588
+    Instance: TestClass{id='id72'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@6e1d9b32
+    Instance: TestClass{id='id21'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@2d758472
+    Instance: TestClass{id='id12'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@6885f3f7
+    Instance: TestClass{id='id23'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@5daa621b
+    Instance: TestClass{id='id22'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@41d53813
+    Instance: TestClass{id='id24'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@3095d06b
+    Instance: TestClass{id='id26'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@7253c53
+    Instance: TestClass{id='id1'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@67f0bf7e
+    Instance: TestClass{id='id-special-final'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@31fc658f
+    Instance: TestClass{id='id2'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@7fd32c56
+    Instance: TestClass{id='id-or-and'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@4bc41565
+    Instance: TestClass{id='id6'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@6c2fea95
+[INFO] Fetching StateMachine for instance: TestClass{id='id72'}
+[INFO] StateMachine fetched for instance: TestClass{id='id72'}
+[INFO] Transition valid. Current state updated to: process
+[INFO] Transition valid. Current state updated to: end
+[TEST] Finished testOrCondition
+]]></system-out>
+  </testcase>
+  <testcase name="testIsInFinalStateWithDeclaredFinalState" classname="com.luis.tfg.ExecutionOrder.MethodOrderAgentTest" time="0.009">
+    <system-out><![CDATA[[TEST] Starting testIsInFinalStateWithDeclaredFinalState
+[INFO] Registering StateMachine for instance: TestClass{id='id-declared-final-state-test'}
+[INFO] Initializing StateMachine with regex: start -> declaredFinal
+[DEBUG] Full regex: start -> declaredFinal
+[DEBUG] Main regex: start -> declaredFinal
+[DEBUG] Special transitions: null
+[DEBUG] Initial state: INITIAL
+[DEBUG] Declared final state: declaredFinal
+[DEBUG] Processing segment: start
+[DEBUG] Added transition from INITIAL to start
+[DEBUG] Processing segment: declaredFinal
+[DEBUG] Added transition from start to declaredFinal
+[DEBUG] Connected final state: declaredFinal to FINAL
+[DEBUG] Complete StateMachine transitions:
+State declaredFinal transitions to: [com.luis.tfg.ExecutionOrder.State@2db6ba81]
+State start transitions to: [com.luis.tfg.ExecutionOrder.State@10728fe8]
+State INITIAL transitions to: [com.luis.tfg.ExecutionOrder.State@16fb9fdd]
+State FINAL transitions to: []
+[DEBUG] Complete StateMachine transitions:
+State declaredFinal transitions to: [com.luis.tfg.ExecutionOrder.State@2db6ba81]
+State start transitions to: [com.luis.tfg.ExecutionOrder.State@10728fe8]
+State INITIAL transitions to: [com.luis.tfg.ExecutionOrder.State@16fb9fdd]
+State FINAL transitions to: []
+[INFO] StateMachine registered for instance: TestClass{id='id-declared-final-state-test'} with transitions: {declaredFinal=[FINAL], start=[declaredFinal], INITIAL=[start]}
+[INFO] Current StateMachineMap content:
+    Instance: TestClass{id='id-special-final2'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@187df588
+    Instance: TestClass{id='id72'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@6e1d9b32
+    Instance: TestClass{id='id21'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@2d758472
+    Instance: TestClass{id='id12'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@6885f3f7
+    Instance: TestClass{id='id23'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@5daa621b
+    Instance: TestClass{id='id22'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@41d53813
+    Instance: TestClass{id='id-declared-final-state-test'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@14bd523b
+    Instance: TestClass{id='id24'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@3095d06b
+    Instance: TestClass{id='id26'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@7253c53
+    Instance: TestClass{id='id1'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@67f0bf7e
+    Instance: TestClass{id='id-special-final'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@31fc658f
+    Instance: TestClass{id='id2'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@7fd32c56
+    Instance: TestClass{id='id-or-and'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@4bc41565
+    Instance: TestClass{id='id6'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@6c2fea95
+[INFO] Fetching StateMachine for instance: TestClass{id='id-declared-final-state-test'}
+[INFO] StateMachine fetched for instance: TestClass{id='id-declared-final-state-test'}
+[INFO] Transition valid. Current state updated to: start
+[INFO] Transition valid. Current state updated to: declaredFinal
+[INFO] handleSpecialFinalTransitions form FINAL STATE
+Allow from final: false
+[INFO] Transition to FINAL is explicitly allowed.
+[TEST] Finished testIsInFinalStateWithDeclaredFinalState
+]]></system-out>
+  </testcase>
+  <testcase name="testOrAndCombination_AllPaths" classname="com.luis.tfg.ExecutionOrder.MethodOrderAgentTest" time="0.038">
+    <system-out><![CDATA[[TEST] Starting testOrAndCombination_AllPaths
+[INFO] Registering StateMachine for instance: TestClass{id='id-or-and-path1'}
+[INFO] Initializing StateMachine with regex: ((start | process) & end) -> FINAL
+[DEBUG] Full regex: ((start | process) & end) -> FINAL
+[DEBUG] Main regex: ((start | process) & end) -> FINAL
+[DEBUG] Special transitions: null
+[DEBUG] Initial state: INITIAL
+[DEBUG] Declared final state: FINAL
+[DEBUG] Processing segment: ((start | process) & end)
+[DEBUG] Handling complex segment: ((start | process) & end)
+[DEBUG] Detected OR-AND combination
+[DEBUG] Entering handleOrAndCondition
+[DEBUG] Initial state: INITIAL
+[DEBUG] Final state: FINAL
+[DEBUG] Segment: ((start | process) & end)
+[DEBUG] Transitions Configured:
+  INITIAL -> [start, process, end]
+  start -> [end]
+  process -> [end]
+  end -> [start, process, FINAL]
+[DEBUG] Processing segment: FINAL
+[DEBUG] Added transition from INITIAL to FINAL
+[DEBUG] Complete StateMachine transitions:
+State process transitions to: [com.luis.tfg.ExecutionOrder.State@42012093]
+State start transitions to: [com.luis.tfg.ExecutionOrder.State@42012093]
+State INITIAL transitions to: [com.luis.tfg.ExecutionOrder.State@3c538e62, com.luis.tfg.ExecutionOrder.State@ca0a21f, com.luis.tfg.ExecutionOrder.State@42012093, com.luis.tfg.ExecutionOrder.State@768d27e8]
+State end transitions to: [com.luis.tfg.ExecutionOrder.State@3c538e62, com.luis.tfg.ExecutionOrder.State@ca0a21f, com.luis.tfg.ExecutionOrder.State@768d27e8]
+State FINAL transitions to: []
+[DEBUG] Complete StateMachine transitions:
+State process transitions to: [com.luis.tfg.ExecutionOrder.State@42012093]
+State start transitions to: [com.luis.tfg.ExecutionOrder.State@42012093]
+State INITIAL transitions to: [com.luis.tfg.ExecutionOrder.State@3c538e62, com.luis.tfg.ExecutionOrder.State@ca0a21f, com.luis.tfg.ExecutionOrder.State@42012093, com.luis.tfg.ExecutionOrder.State@768d27e8]
+State end transitions to: [com.luis.tfg.ExecutionOrder.State@3c538e62, com.luis.tfg.ExecutionOrder.State@ca0a21f, com.luis.tfg.ExecutionOrder.State@768d27e8]
+State FINAL transitions to: []
+[INFO] StateMachine registered for instance: TestClass{id='id-or-and-path1'} with transitions: {process=[end], start=[end], INITIAL=[process, start, end, FINAL], end=[process, start, FINAL]}
+[INFO] Current StateMachineMap content:
+    Instance: TestClass{id='id-special-final2'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@187df588
+    Instance: TestClass{id='id72'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@6e1d9b32
+    Instance: TestClass{id='id21'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@2d758472
+    Instance: TestClass{id='id12'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@6885f3f7
+    Instance: TestClass{id='id23'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@5daa621b
+    Instance: TestClass{id='id22'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@41d53813
+    Instance: TestClass{id='id-declared-final-state-test'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@14bd523b
+    Instance: TestClass{id='id-or-and-path1'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@3dc39412
+    Instance: TestClass{id='id24'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@3095d06b
+    Instance: TestClass{id='id26'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@7253c53
+    Instance: TestClass{id='id1'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@67f0bf7e
+    Instance: TestClass{id='id-special-final'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@31fc658f
+    Instance: TestClass{id='id2'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@7fd32c56
+    Instance: TestClass{id='id-or-and'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@4bc41565
+    Instance: TestClass{id='id6'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@6c2fea95
+[INFO] Fetching StateMachine for instance: TestClass{id='id-or-and-path1'}
+[INFO] StateMachine fetched for instance: TestClass{id='id-or-and-path1'}
+[INFO] Transition valid. Current state updated to: start
+[INFO] Transition valid. Current state updated to: end
+[INFO] Registering StateMachine for instance: TestClass{id='id-or-and-path2'}
+[INFO] Initializing StateMachine with regex: ((start | process) & end) -> FINAL
+[DEBUG] Full regex: ((start | process) & end) -> FINAL
+[DEBUG] Main regex: ((start | process) & end) -> FINAL
+[DEBUG] Special transitions: null
+[DEBUG] Initial state: INITIAL
+[DEBUG] Declared final state: FINAL
+[DEBUG] Processing segment: ((start | process) & end)
+[DEBUG] Handling complex segment: ((start | process) & end)
+[DEBUG] Detected OR-AND combination
+[DEBUG] Entering handleOrAndCondition
+[DEBUG] Initial state: INITIAL
+[DEBUG] Final state: FINAL
+[DEBUG] Segment: ((start | process) & end)
+[DEBUG] Transitions Configured:
+  INITIAL -> [start, process, end]
+  start -> [end]
+  process -> [end]
+  end -> [start, process, FINAL]
+[DEBUG] Processing segment: FINAL
+[DEBUG] Added transition from INITIAL to FINAL
+[DEBUG] Complete StateMachine transitions:
+State process transitions to: [com.luis.tfg.ExecutionOrder.State@1d432d56]
+State start transitions to: [com.luis.tfg.ExecutionOrder.State@1d432d56]
+State INITIAL transitions to: [com.luis.tfg.ExecutionOrder.State@147ad4bb, com.luis.tfg.ExecutionOrder.State@bd703bb, com.luis.tfg.ExecutionOrder.State@1d432d56, com.luis.tfg.ExecutionOrder.State@2a9565d7]
+State end transitions to: [com.luis.tfg.ExecutionOrder.State@147ad4bb, com.luis.tfg.ExecutionOrder.State@bd703bb, com.luis.tfg.ExecutionOrder.State@2a9565d7]
+State FINAL transitions to: []
+[DEBUG] Complete StateMachine transitions:
+State process transitions to: [com.luis.tfg.ExecutionOrder.State@1d432d56]
+State start transitions to: [com.luis.tfg.ExecutionOrder.State@1d432d56]
+State INITIAL transitions to: [com.luis.tfg.ExecutionOrder.State@147ad4bb, com.luis.tfg.ExecutionOrder.State@bd703bb, com.luis.tfg.ExecutionOrder.State@1d432d56, com.luis.tfg.ExecutionOrder.State@2a9565d7]
+State end transitions to: [com.luis.tfg.ExecutionOrder.State@147ad4bb, com.luis.tfg.ExecutionOrder.State@bd703bb, com.luis.tfg.ExecutionOrder.State@2a9565d7]
+State FINAL transitions to: []
+[INFO] StateMachine registered for instance: TestClass{id='id-or-and-path2'} with transitions: {process=[end], start=[end], INITIAL=[process, start, end, FINAL], end=[process, start, FINAL]}
+[INFO] Current StateMachineMap content:
+    Instance: TestClass{id='id-special-final2'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@187df588
+    Instance: TestClass{id='id72'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@6e1d9b32
+    Instance: TestClass{id='id21'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@2d758472
+    Instance: TestClass{id='id12'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@6885f3f7
+    Instance: TestClass{id='id23'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@5daa621b
+    Instance: TestClass{id='id22'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@41d53813
+    Instance: TestClass{id='id-declared-final-state-test'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@14bd523b
+    Instance: TestClass{id='id-or-and-path1'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@3dc39412
+    Instance: TestClass{id='id24'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@3095d06b
+    Instance: TestClass{id='id26'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@7253c53
+    Instance: TestClass{id='id-or-and-path2'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@2e38d44e
+    Instance: TestClass{id='id1'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@67f0bf7e
+    Instance: TestClass{id='id-special-final'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@31fc658f
+    Instance: TestClass{id='id2'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@7fd32c56
+    Instance: TestClass{id='id-or-and'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@4bc41565
+    Instance: TestClass{id='id6'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@6c2fea95
+[INFO] Fetching StateMachine for instance: TestClass{id='id-or-and-path2'}
+[INFO] StateMachine fetched for instance: TestClass{id='id-or-and-path2'}
+[INFO] Transition valid. Current state updated to: process
+[INFO] Transition valid. Current state updated to: end
+[INFO] Registering StateMachine for instance: TestClass{id='id-or-and-path3'}
+[INFO] Initializing StateMachine with regex: ((start | process) & end) -> FINAL
+[DEBUG] Full regex: ((start | process) & end) -> FINAL
+[DEBUG] Main regex: ((start | process) & end) -> FINAL
+[DEBUG] Special transitions: null
+[DEBUG] Initial state: INITIAL
+[DEBUG] Declared final state: FINAL
+[DEBUG] Processing segment: ((start | process) & end)
+[DEBUG] Handling complex segment: ((start | process) & end)
+[DEBUG] Detected OR-AND combination
+[DEBUG] Entering handleOrAndCondition
+[DEBUG] Initial state: INITIAL
+[DEBUG] Final state: FINAL
+[DEBUG] Segment: ((start | process) & end)
+[DEBUG] Transitions Configured:
+  INITIAL -> [start, process, end]
+  start -> [end]
+  process -> [end]
+  end -> [start, process, FINAL]
+[DEBUG] Processing segment: FINAL
+[DEBUG] Added transition from INITIAL to FINAL
+[DEBUG] Complete StateMachine transitions:
+State process transitions to: [com.luis.tfg.ExecutionOrder.State@6c25123e]
+State start transitions to: [com.luis.tfg.ExecutionOrder.State@6c25123e]
+State INITIAL transitions to: [com.luis.tfg.ExecutionOrder.State@5f5c0eda, com.luis.tfg.ExecutionOrder.State@5e66733b, com.luis.tfg.ExecutionOrder.State@6c25123e, com.luis.tfg.ExecutionOrder.State@3694461d]
+State end transitions to: [com.luis.tfg.ExecutionOrder.State@5f5c0eda, com.luis.tfg.ExecutionOrder.State@5e66733b, com.luis.tfg.ExecutionOrder.State@3694461d]
+State FINAL transitions to: []
+[DEBUG] Complete StateMachine transitions:
+State process transitions to: [com.luis.tfg.ExecutionOrder.State@6c25123e]
+State start transitions to: [com.luis.tfg.ExecutionOrder.State@6c25123e]
+State INITIAL transitions to: [com.luis.tfg.ExecutionOrder.State@5f5c0eda, com.luis.tfg.ExecutionOrder.State@5e66733b, com.luis.tfg.ExecutionOrder.State@6c25123e, com.luis.tfg.ExecutionOrder.State@3694461d]
+State end transitions to: [com.luis.tfg.ExecutionOrder.State@5f5c0eda, com.luis.tfg.ExecutionOrder.State@5e66733b, com.luis.tfg.ExecutionOrder.State@3694461d]
+State FINAL transitions to: []
+[INFO] StateMachine registered for instance: TestClass{id='id-or-and-path3'} with transitions: {process=[end], start=[end], INITIAL=[process, start, end, FINAL], end=[process, start, FINAL]}
+[INFO] Current StateMachineMap content:
+    Instance: TestClass{id='id-special-final2'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@187df588
+    Instance: TestClass{id='id72'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@6e1d9b32
+    Instance: TestClass{id='id21'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@2d758472
+    Instance: TestClass{id='id12'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@6885f3f7
+    Instance: TestClass{id='id23'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@5daa621b
+    Instance: TestClass{id='id22'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@41d53813
+    Instance: TestClass{id='id-declared-final-state-test'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@14bd523b
+    Instance: TestClass{id='id-or-and-path1'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@3dc39412
+    Instance: TestClass{id='id24'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@3095d06b
+    Instance: TestClass{id='id-or-and-path3'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@72641613
+    Instance: TestClass{id='id26'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@7253c53
+    Instance: TestClass{id='id-or-and-path2'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@2e38d44e
+    Instance: TestClass{id='id1'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@67f0bf7e
+    Instance: TestClass{id='id-special-final'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@31fc658f
+    Instance: TestClass{id='id2'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@7fd32c56
+    Instance: TestClass{id='id-or-and'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@4bc41565
+    Instance: TestClass{id='id6'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@6c2fea95
+[INFO] Fetching StateMachine for instance: TestClass{id='id-or-and-path3'}
+[INFO] StateMachine fetched for instance: TestClass{id='id-or-and-path3'}
+[INFO] Transition valid. Current state updated to: end
+[INFO] Transition valid. Current state updated to: start
+[INFO] Transition valid. Current state updated to: end
+[INFO] Registering StateMachine for instance: TestClass{id='id-or-and-path4'}
+[INFO] Initializing StateMachine with regex: ((start | process) & end) -> FINAL
+[DEBUG] Full regex: ((start | process) & end) -> FINAL
+[DEBUG] Main regex: ((start | process) & end) -> FINAL
+[DEBUG] Special transitions: null
+[DEBUG] Initial state: INITIAL
+[DEBUG] Declared final state: FINAL
+[DEBUG] Processing segment: ((start | process) & end)
+[DEBUG] Handling complex segment: ((start | process) & end)
+[DEBUG] Detected OR-AND combination
+[DEBUG] Entering handleOrAndCondition
+[DEBUG] Initial state: INITIAL
+[DEBUG] Final state: FINAL
+[DEBUG] Segment: ((start | process) & end)
+[DEBUG] Transitions Configured:
+  INITIAL -> [start, process, end]
+  start -> [end]
+  process -> [end]
+  end -> [start, process, FINAL]
+[DEBUG] Processing segment: FINAL
+[DEBUG] Added transition from INITIAL to FINAL
+[DEBUG] Complete StateMachine transitions:
+State process transitions to: [com.luis.tfg.ExecutionOrder.State@4d71ec5b]
+State start transitions to: [com.luis.tfg.ExecutionOrder.State@4d71ec5b]
+State INITIAL transitions to: [com.luis.tfg.ExecutionOrder.State@20e3b165, com.luis.tfg.ExecutionOrder.State@34d3bfca, com.luis.tfg.ExecutionOrder.State@4d71ec5b, com.luis.tfg.ExecutionOrder.State@6655f3cd]
+State end transitions to: [com.luis.tfg.ExecutionOrder.State@20e3b165, com.luis.tfg.ExecutionOrder.State@34d3bfca, com.luis.tfg.ExecutionOrder.State@6655f3cd]
+State FINAL transitions to: []
+[DEBUG] Complete StateMachine transitions:
+State process transitions to: [com.luis.tfg.ExecutionOrder.State@4d71ec5b]
+State start transitions to: [com.luis.tfg.ExecutionOrder.State@4d71ec5b]
+State INITIAL transitions to: [com.luis.tfg.ExecutionOrder.State@20e3b165, com.luis.tfg.ExecutionOrder.State@34d3bfca, com.luis.tfg.ExecutionOrder.State@4d71ec5b, com.luis.tfg.ExecutionOrder.State@6655f3cd]
+State end transitions to: [com.luis.tfg.ExecutionOrder.State@20e3b165, com.luis.tfg.ExecutionOrder.State@34d3bfca, com.luis.tfg.ExecutionOrder.State@6655f3cd]
+State FINAL transitions to: []
+[INFO] StateMachine registered for instance: TestClass{id='id-or-and-path4'} with transitions: {process=[end], start=[end], INITIAL=[process, start, end, FINAL], end=[process, start, FINAL]}
+[INFO] Current StateMachineMap content:
+    Instance: TestClass{id='id-special-final2'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@187df588
+    Instance: TestClass{id='id72'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@6e1d9b32
+    Instance: TestClass{id='id21'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@2d758472
+    Instance: TestClass{id='id12'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@6885f3f7
+    Instance: TestClass{id='id23'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@5daa621b
+    Instance: TestClass{id='id22'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@41d53813
+    Instance: TestClass{id='id-declared-final-state-test'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@14bd523b
+    Instance: TestClass{id='id-or-and-path1'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@3dc39412
+    Instance: TestClass{id='id24'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@3095d06b
+    Instance: TestClass{id='id-or-and-path3'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@72641613
+    Instance: TestClass{id='id26'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@7253c53
+    Instance: TestClass{id='id-or-and-path2'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@2e38d44e
+    Instance: TestClass{id='id-or-and-path4'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@2484c868
+    Instance: TestClass{id='id1'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@67f0bf7e
+    Instance: TestClass{id='id-special-final'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@31fc658f
+    Instance: TestClass{id='id2'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@7fd32c56
+    Instance: TestClass{id='id-or-and'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@4bc41565
+    Instance: TestClass{id='id6'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@6c2fea95
+[INFO] Fetching StateMachine for instance: TestClass{id='id-or-and-path4'}
+[INFO] StateMachine fetched for instance: TestClass{id='id-or-and-path4'}
+[INFO] Transition valid. Current state updated to: end
+[INFO] Transition valid. Current state updated to: process
+[INFO] Transition valid. Current state updated to: end
+[TEST] Finished testOrAndCombination_AllPaths
+]]></system-out>
+  </testcase>
+  <testcase name="testRepetition" classname="com.luis.tfg.ExecutionOrder.MethodOrderAgentTest" time="0.033">
+    <system-out><![CDATA[[INFO] Registering StateMachine for instance: TestClass{id='id8'}
+[INFO] Initializing StateMachine with regex: (repeat){2} -> end
+[DEBUG] Full regex: (repeat){2} -> end
+[DEBUG] Main regex: (repeat){2} -> end
+[DEBUG] Special transitions: null
+[DEBUG] Initial state: INITIAL
+[DEBUG] Declared final state: end
+[DEBUG] Processing segment: (repeat){2}
+[DEBUG] Handling complex segment: (repeat){2}
+[DEBUG] Detected repetition. Segment: (repeat){2}
+[DEBUG] State transitions for repetition:
+  INITIAL -> [repeat_rep1]
+  repeat_rep1 -> [repeat_rep2]
+  repeat_rep2 -> [end]
+[DEBUG] Processing segment: end
+[DEBUG] Added transition from INITIAL to end
+[DEBUG] Connected final state: end to FINAL
+[DEBUG] Complete StateMachine transitions:
+State INITIAL transitions to: [com.luis.tfg.ExecutionOrder.State@448a6d00, com.luis.tfg.ExecutionOrder.State@848d9bc]
+State end transitions to: [com.luis.tfg.ExecutionOrder.State@3a66d97e]
+State FINAL transitions to: []
+State repeat_rep2 transitions to: [com.luis.tfg.ExecutionOrder.State@448a6d00]
+State repeat_rep1 transitions to: [com.luis.tfg.ExecutionOrder.State@1add3e03]
+[DEBUG] Complete StateMachine transitions:
+State INITIAL transitions to: [com.luis.tfg.ExecutionOrder.State@448a6d00, com.luis.tfg.ExecutionOrder.State@848d9bc]
+State end transitions to: [com.luis.tfg.ExecutionOrder.State@3a66d97e]
+State FINAL transitions to: []
+State repeat_rep2 transitions to: [com.luis.tfg.ExecutionOrder.State@448a6d00]
+State repeat_rep1 transitions to: [com.luis.tfg.ExecutionOrder.State@1add3e03]
+[INFO] StateMachine registered for instance: TestClass{id='id8'} with transitions: {INITIAL=[end, repeat_rep1], end=[FINAL], repeat_rep2=[end], repeat_rep1=[repeat_rep2]}
+[INFO] Current StateMachineMap content:
+    Instance: TestClass{id='id-special-final2'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@187df588
+    Instance: TestClass{id='id72'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@6e1d9b32
+    Instance: TestClass{id='id21'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@2d758472
+    Instance: TestClass{id='id12'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@6885f3f7
+    Instance: TestClass{id='id23'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@5daa621b
+    Instance: TestClass{id='id22'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@41d53813
+    Instance: TestClass{id='id-declared-final-state-test'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@14bd523b
+    Instance: TestClass{id='id-or-and-path1'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@3dc39412
+    Instance: TestClass{id='id24'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@3095d06b
+    Instance: TestClass{id='id-or-and-path3'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@72641613
+    Instance: TestClass{id='id26'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@7253c53
+    Instance: TestClass{id='id-or-and-path2'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@2e38d44e
+    Instance: TestClass{id='id-or-and-path4'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@2484c868
+    Instance: TestClass{id='id1'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@67f0bf7e
+    Instance: TestClass{id='id-special-final'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@31fc658f
+    Instance: TestClass{id='id2'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@7fd32c56
+    Instance: TestClass{id='id-or-and'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@4bc41565
+    Instance: TestClass{id='id6'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@6c2fea95
+    Instance: TestClass{id='id8'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@d28a235
+[INFO] Fetching StateMachine for instance: TestClass{id='id8'}
+[INFO] StateMachine fetched for instance: TestClass{id='id8'}
+[INFO] Transition valid. Current state updated to: repeat_rep1
+[INFO] Transition valid. Current state updated to: repeat_rep2
+[INFO] Transition valid. Current state updated to: end
+]]></system-out>
+  </testcase>
+  <testcase name="testFlexibleSequence2" classname="com.luis.tfg.ExecutionOrder.MethodOrderAgentTest" time="0.016">
+    <system-out><![CDATA[[TEST] Starting testFlexibleSequence
+[INFO] Registering StateMachine for instance: TestClass{id='id27'}
+[INFO] Initializing StateMachine with regex: (start .* end)
+[DEBUG] Full regex: (start .* end)
+[DEBUG] Main regex: (start .* end)
+[DEBUG] Special transitions: null
+[DEBUG] Initial state: INITIAL
+[DEBUG] Declared final state: end
+[DEBUG] Processing segment: (start
+[DEBUG] Added transition from INITIAL to start
+[DEBUG] Processing segment: .*
+[DEBUG] Handling complex segment: .*
+[DEBUG] Detected wildcard. Segment: .*
+[DEBUG] Wildcard condition configured: start -> .* -> [end]
+[DEBUG] Processing segment: end)
+[DEBUG] Added transition from start to end
+[DEBUG] Connected final state: end to FINAL
+[DEBUG] Complete StateMachine transitions:
+State start transitions to: [com.luis.tfg.ExecutionOrder.State@4fc2933e, com.luis.tfg.ExecutionOrder.State@3c9c91e3]
+State INITIAL transitions to: [com.luis.tfg.ExecutionOrder.State@746da54f]
+State end transitions to: [com.luis.tfg.ExecutionOrder.State@2f2d8770]
+State FINAL transitions to: []
+State .* transitions to: [com.luis.tfg.ExecutionOrder.State@742dbac8, com.luis.tfg.ExecutionOrder.State@4fc2933e, com.luis.tfg.ExecutionOrder.State@3c9c91e3]
+[DEBUG] Complete StateMachine transitions:
+State start transitions to: [com.luis.tfg.ExecutionOrder.State@4fc2933e, com.luis.tfg.ExecutionOrder.State@3c9c91e3]
+State INITIAL transitions to: [com.luis.tfg.ExecutionOrder.State@746da54f]
+State end transitions to: [com.luis.tfg.ExecutionOrder.State@2f2d8770]
+State FINAL transitions to: []
+State .* transitions to: [com.luis.tfg.ExecutionOrder.State@742dbac8, com.luis.tfg.ExecutionOrder.State@4fc2933e, com.luis.tfg.ExecutionOrder.State@3c9c91e3]
+[INFO] StateMachine registered for instance: TestClass{id='id27'} with transitions: {start=[end, .*], INITIAL=[start], end=[FINAL], .*=[INITIAL, end, .*]}
+[INFO] Current StateMachineMap content:
+    Instance: TestClass{id='id-special-final2'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@187df588
+    Instance: TestClass{id='id72'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@6e1d9b32
+    Instance: TestClass{id='id21'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@2d758472
+    Instance: TestClass{id='id12'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@6885f3f7
+    Instance: TestClass{id='id23'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@5daa621b
+    Instance: TestClass{id='id22'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@41d53813
+    Instance: TestClass{id='id-declared-final-state-test'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@14bd523b
+    Instance: TestClass{id='id-or-and-path1'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@3dc39412
+    Instance: TestClass{id='id24'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@3095d06b
+    Instance: TestClass{id='id-or-and-path3'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@72641613
+    Instance: TestClass{id='id27'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@2ce62e27
+    Instance: TestClass{id='id26'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@7253c53
+    Instance: TestClass{id='id-or-and-path2'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@2e38d44e
+    Instance: TestClass{id='id-or-and-path4'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@2484c868
+    Instance: TestClass{id='id1'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@67f0bf7e
+    Instance: TestClass{id='id-special-final'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@31fc658f
+    Instance: TestClass{id='id2'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@7fd32c56
+    Instance: TestClass{id='id-or-and'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@4bc41565
+    Instance: TestClass{id='id6'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@6c2fea95
+    Instance: TestClass{id='id8'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@d28a235
+[INFO] Fetching StateMachine for instance: TestClass{id='id27'}
+[INFO] StateMachine fetched for instance: TestClass{id='id27'}
+[INFO] Transition valid. Current state updated to: start
+[INFO] Wildcard transition detected from start to step1
+[DEBUG] Created intermediate state for wildcard transition: step1
+[DEBUG] Dynamically added transition from start to step1
+[DEBUG] Dynamically added transition from INITIAL to step1
+[DEBUG] Dynamically added transition from step1 to INITIAL
+[DEBUG] Dynamically added transition from step1 to end
+[DEBUG] Dynamically added transition from step1 to .*
+[DEBUG] Dynamically added transition from step1 to step1
+[INFO] Wildcard transition valid to state: step1
+[INFO] Wildcard transition detected from step1 to step2
+[DEBUG] Created intermediate state for wildcard transition: step2
+[DEBUG] Dynamically added transition from step1 to step2
+[DEBUG] Dynamically added transition from start to step2
+[DEBUG] Dynamically added transition from INITIAL to step2
+[DEBUG] Dynamically added transition from step2 to INITIAL
+[DEBUG] Dynamically added transition from step2 to end
+[DEBUG] Dynamically added transition from step2 to .*
+[DEBUG] Dynamically added transition from step2 to step2
+[DEBUG] Dynamically added transition from step2 to step1
+[INFO] Wildcard transition valid to state: step2
+[INFO] Transition valid. Current state updated to: end
+[TEST] Finished testFlexibleSequence
+]]></system-out>
+  </testcase>
+  <testcase name="testInvalidRepetition" classname="com.luis.tfg.ExecutionOrder.MethodOrderAgentTest" time="0.01">
+    <system-out><![CDATA[[TEST] Starting testInvalidRepetition
+[INFO] Registering StateMachine for instance: TestClass{id='id10'}
+[INFO] Initializing StateMachine with regex: (repeat){2} -> end
+[DEBUG] Full regex: (repeat){2} -> end
+[DEBUG] Main regex: (repeat){2} -> end
+[DEBUG] Special transitions: null
+[DEBUG] Initial state: INITIAL
+[DEBUG] Declared final state: end
+[DEBUG] Processing segment: (repeat){2}
+[DEBUG] Handling complex segment: (repeat){2}
+[DEBUG] Detected repetition. Segment: (repeat){2}
+[DEBUG] State transitions for repetition:
+  INITIAL -> [repeat_rep1]
+  repeat_rep1 -> [repeat_rep2]
+  repeat_rep2 -> [end]
+[DEBUG] Processing segment: end
+[DEBUG] Added transition from INITIAL to end
+[DEBUG] Connected final state: end to FINAL
+[DEBUG] Complete StateMachine transitions:
+State INITIAL transitions to: [com.luis.tfg.ExecutionOrder.State@3538a129, com.luis.tfg.ExecutionOrder.State@766db6f9]
+State end transitions to: [com.luis.tfg.ExecutionOrder.State@6f8fb906]
+State FINAL transitions to: []
+State repeat_rep2 transitions to: [com.luis.tfg.ExecutionOrder.State@3538a129]
+State repeat_rep1 transitions to: [com.luis.tfg.ExecutionOrder.State@728535c6]
+[DEBUG] Complete StateMachine transitions:
+State INITIAL transitions to: [com.luis.tfg.ExecutionOrder.State@3538a129, com.luis.tfg.ExecutionOrder.State@766db6f9]
+State end transitions to: [com.luis.tfg.ExecutionOrder.State@6f8fb906]
+State FINAL transitions to: []
+State repeat_rep2 transitions to: [com.luis.tfg.ExecutionOrder.State@3538a129]
+State repeat_rep1 transitions to: [com.luis.tfg.ExecutionOrder.State@728535c6]
+[INFO] StateMachine registered for instance: TestClass{id='id10'} with transitions: {INITIAL=[end, repeat_rep1], end=[FINAL], repeat_rep2=[end], repeat_rep1=[repeat_rep2]}
+[INFO] Current StateMachineMap content:
+    Instance: TestClass{id='id-special-final2'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@187df588
+    Instance: TestClass{id='id72'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@6e1d9b32
+    Instance: TestClass{id='id21'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@2d758472
+    Instance: TestClass{id='id10'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@244f356
+    Instance: TestClass{id='id12'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@6885f3f7
+    Instance: TestClass{id='id23'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@5daa621b
+    Instance: TestClass{id='id22'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@41d53813
+    Instance: TestClass{id='id-declared-final-state-test'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@14bd523b
+    Instance: TestClass{id='id-or-and-path1'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@3dc39412
+    Instance: TestClass{id='id24'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@3095d06b
+    Instance: TestClass{id='id-or-and-path3'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@72641613
+    Instance: TestClass{id='id27'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@2ce62e27
+    Instance: TestClass{id='id26'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@7253c53
+    Instance: TestClass{id='id-or-and-path2'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@2e38d44e
+    Instance: TestClass{id='id-or-and-path4'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@2484c868
+    Instance: TestClass{id='id1'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@67f0bf7e
+    Instance: TestClass{id='id-special-final'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@31fc658f
+    Instance: TestClass{id='id2'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@7fd32c56
+    Instance: TestClass{id='id-or-and'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@4bc41565
+    Instance: TestClass{id='id6'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@6c2fea95
+    Instance: TestClass{id='id8'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@d28a235
+[INFO] Fetching StateMachine for instance: TestClass{id='id10'}
+[INFO] StateMachine fetched for instance: TestClass{id='id10'}
+[INFO] Transition valid. Current state updated to: repeat_rep1
+[TEST] Finished testInvalidRepetition
+]]></system-out>
+  </testcase>
+  <testcase name="testMultipleStateMachines" classname="com.luis.tfg.ExecutionOrder.MethodOrderAgentTest" time="0.022">
+    <system-out><![CDATA[[INFO] Registering StateMachine for instance: TestClass{id='id28'}
+[INFO] Initializing StateMachine with regex: (start process end)
+[DEBUG] Full regex: (start process end)
+[DEBUG] Main regex: (start process end)
+[DEBUG] Special transitions: null
+[DEBUG] Initial state: INITIAL
+[DEBUG] Declared final state: end
+[DEBUG] Processing segment: (start
+[DEBUG] Added transition from INITIAL to start
+[DEBUG] Processing segment: process
+[DEBUG] Added transition from start to process
+[DEBUG] Processing segment: end)
+[DEBUG] Added transition from process to end
+[DEBUG] Connected final state: end to FINAL
+[DEBUG] Complete StateMachine transitions:
+State process transitions to: [com.luis.tfg.ExecutionOrder.State@19855799]
+State start transitions to: [com.luis.tfg.ExecutionOrder.State@bd09a26]
+State INITIAL transitions to: [com.luis.tfg.ExecutionOrder.State@5020b59f]
+State end transitions to: [com.luis.tfg.ExecutionOrder.State@75db328e]
+State FINAL transitions to: []
+[DEBUG] Complete StateMachine transitions:
+State process transitions to: [com.luis.tfg.ExecutionOrder.State@19855799]
+State start transitions to: [com.luis.tfg.ExecutionOrder.State@bd09a26]
+State INITIAL transitions to: [com.luis.tfg.ExecutionOrder.State@5020b59f]
+State end transitions to: [com.luis.tfg.ExecutionOrder.State@75db328e]
+State FINAL transitions to: []
+[INFO] StateMachine registered for instance: TestClass{id='id28'} with transitions: {process=[end], start=[process], INITIAL=[start], end=[FINAL]}
+[INFO] Current StateMachineMap content:
+    Instance: TestClass{id='id-special-final2'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@187df588
+    Instance: TestClass{id='id72'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@6e1d9b32
+    Instance: TestClass{id='id21'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@2d758472
+    Instance: TestClass{id='id10'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@244f356
+    Instance: TestClass{id='id12'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@6885f3f7
+    Instance: TestClass{id='id23'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@5daa621b
+    Instance: TestClass{id='id22'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@41d53813
+    Instance: TestClass{id='id-declared-final-state-test'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@14bd523b
+    Instance: TestClass{id='id-or-and-path1'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@3dc39412
+    Instance: TestClass{id='id24'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@3095d06b
+    Instance: TestClass{id='id-or-and-path3'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@72641613
+    Instance: TestClass{id='id27'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@2ce62e27
+    Instance: TestClass{id='id26'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@7253c53
+    Instance: TestClass{id='id-or-and-path2'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@2e38d44e
+    Instance: TestClass{id='id-or-and-path4'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@2484c868
+    Instance: TestClass{id='id28'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@46d18a33
+    Instance: TestClass{id='id1'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@67f0bf7e
+    Instance: TestClass{id='id-special-final'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@31fc658f
+    Instance: TestClass{id='id2'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@7fd32c56
+    Instance: TestClass{id='id-or-and'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@4bc41565
+    Instance: TestClass{id='id6'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@6c2fea95
+    Instance: TestClass{id='id8'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@d28a235
+[INFO] Registering StateMachine for instance: TestClass{id='id29'}
+[INFO] Initializing StateMachine with regex: (init action done)
+[DEBUG] Full regex: (init action done)
+[DEBUG] Main regex: (init action done)
+[DEBUG] Special transitions: null
+[DEBUG] Initial state: INITIAL
+[DEBUG] Declared final state: done
+[DEBUG] Processing segment: (init
+[DEBUG] Added transition from INITIAL to init
+[DEBUG] Processing segment: action
+[DEBUG] Added transition from init to action
+[DEBUG] Processing segment: done)
+[DEBUG] Added transition from action to done
+[DEBUG] Connected final state: done to FINAL
+[DEBUG] Complete StateMachine transitions:
+State init transitions to: [com.luis.tfg.ExecutionOrder.State@495f3965]
+State INITIAL transitions to: [com.luis.tfg.ExecutionOrder.State@1c06f19c]
+State action transitions to: [com.luis.tfg.ExecutionOrder.State@3065efd0]
+State FINAL transitions to: []
+State done transitions to: [com.luis.tfg.ExecutionOrder.State@7aaf6bfd]
+[DEBUG] Complete StateMachine transitions:
+State init transitions to: [com.luis.tfg.ExecutionOrder.State@495f3965]
+State INITIAL transitions to: [com.luis.tfg.ExecutionOrder.State@1c06f19c]
+State action transitions to: [com.luis.tfg.ExecutionOrder.State@3065efd0]
+State FINAL transitions to: []
+State done transitions to: [com.luis.tfg.ExecutionOrder.State@7aaf6bfd]
+[INFO] StateMachine registered for instance: TestClass{id='id29'} with transitions: {init=[action], INITIAL=[init], action=[done], done=[FINAL]}
+[INFO] Current StateMachineMap content:
+    Instance: TestClass{id='id-special-final2'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@187df588
+    Instance: TestClass{id='id72'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@6e1d9b32
+    Instance: TestClass{id='id21'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@2d758472
+    Instance: TestClass{id='id10'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@244f356
+    Instance: TestClass{id='id12'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@6885f3f7
+    Instance: TestClass{id='id23'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@5daa621b
+    Instance: TestClass{id='id22'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@41d53813
+    Instance: TestClass{id='id-declared-final-state-test'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@14bd523b
+    Instance: TestClass{id='id-or-and-path1'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@3dc39412
+    Instance: TestClass{id='id24'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@3095d06b
+    Instance: TestClass{id='id-or-and-path3'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@72641613
+    Instance: TestClass{id='id27'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@2ce62e27
+    Instance: TestClass{id='id26'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@7253c53
+    Instance: TestClass{id='id-or-and-path2'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@2e38d44e
+    Instance: TestClass{id='id29'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@4a8bf1dc
+    Instance: TestClass{id='id-or-and-path4'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@2484c868
+    Instance: TestClass{id='id28'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@46d18a33
+    Instance: TestClass{id='id1'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@67f0bf7e
+    Instance: TestClass{id='id-special-final'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@31fc658f
+    Instance: TestClass{id='id2'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@7fd32c56
+    Instance: TestClass{id='id-or-and'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@4bc41565
+    Instance: TestClass{id='id6'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@6c2fea95
+    Instance: TestClass{id='id8'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@d28a235
+[INFO] Fetching StateMachine for instance: TestClass{id='id28'}
+[INFO] StateMachine fetched for instance: TestClass{id='id28'}
+[INFO] Fetching StateMachine for instance: TestClass{id='id29'}
+[INFO] StateMachine fetched for instance: TestClass{id='id29'}
+[INFO] Transition valid. Current state updated to: start
+[INFO] Transition valid. Current state updated to: process
+[INFO] Transition valid. Current state updated to: end
+[INFO] Transition valid. Current state updated to: init
+[INFO] Transition valid. Current state updated to: action
+[INFO] Transition valid. Current state updated to: done
+]]></system-out>
+  </testcase>
+  <testcase name="testAndOrCombination" classname="com.luis.tfg.ExecutionOrder.MethodOrderAgentTest" time="0.023">
+    <system-out><![CDATA[[INFO] Registering StateMachine for instance: TestClass{id='id55-and'}
+[INFO] Initializing StateMachine with regex: ((start & process) | middle) -> end -> FINAL
+[DEBUG] Full regex: ((start & process) | middle) -> end -> FINAL
+[DEBUG] Main regex: ((start & process) | middle) -> end -> FINAL
+[DEBUG] Special transitions: null
+[DEBUG] Initial state: INITIAL
+[DEBUG] Declared final state: FINAL
+[DEBUG] Processing segment: ((start & process) | middle)
+[DEBUG] Handling complex segment: ((start & process) | middle)
+[DEBUG] Detected AND-OR combination
+[DEBUG] AND-Condition Transitions Configured:
+  INITIAL -> [start, process]
+  start -> [process]
+  process -> [start]
+  process, start -> [end]
+[DEBUG] Processing segment: end
+[DEBUG] Added transition from INITIAL to end
+[DEBUG] Processing segment: FINAL
+[DEBUG] Added transition from end to FINAL
+[DEBUG] Complete StateMachine transitions:
+State process transitions to: [com.luis.tfg.ExecutionOrder.State@6a4f7c17]
+State middle transitions to: [com.luis.tfg.ExecutionOrder.State@584fb03d]
+State 9513dcd1-f660-46fe-bfca-98bfedf66e53 transitions to: [com.luis.tfg.ExecutionOrder.State@584fb03d]
+State start transitions to: [com.luis.tfg.ExecutionOrder.State@563392e5]
+State INITIAL transitions to: [com.luis.tfg.ExecutionOrder.State@52d181ed, com.luis.tfg.ExecutionOrder.State@43efe064, com.luis.tfg.ExecutionOrder.State@66046e7c, com.luis.tfg.ExecutionOrder.State@584fb03d]
+State end transitions to: [com.luis.tfg.ExecutionOrder.State@2c6a6ce3]
+State FINAL transitions to: []
+State 1f9f428e-f82c-4b2b-be53-ea41bb4ae24d transitions to: [com.luis.tfg.ExecutionOrder.State@584fb03d]
+[DEBUG] Complete StateMachine transitions:
+State process transitions to: [com.luis.tfg.ExecutionOrder.State@6a4f7c17]
+State middle transitions to: [com.luis.tfg.ExecutionOrder.State@584fb03d]
+State 9513dcd1-f660-46fe-bfca-98bfedf66e53 transitions to: [com.luis.tfg.ExecutionOrder.State@584fb03d]
+State start transitions to: [com.luis.tfg.ExecutionOrder.State@563392e5]
+State INITIAL transitions to: [com.luis.tfg.ExecutionOrder.State@52d181ed, com.luis.tfg.ExecutionOrder.State@43efe064, com.luis.tfg.ExecutionOrder.State@66046e7c, com.luis.tfg.ExecutionOrder.State@584fb03d]
+State end transitions to: [com.luis.tfg.ExecutionOrder.State@2c6a6ce3]
+State FINAL transitions to: []
+State 1f9f428e-f82c-4b2b-be53-ea41bb4ae24d transitions to: [com.luis.tfg.ExecutionOrder.State@584fb03d]
+[INFO] StateMachine registered for instance: TestClass{id='id55-and'} with transitions: {process=[1f9f428e-f82c-4b2b-be53-ea41bb4ae24d], middle=[end], 9513dcd1-f660-46fe-bfca-98bfedf66e53=[end], start=[9513dcd1-f660-46fe-bfca-98bfedf66e53], INITIAL=[process, middle, start, end], end=[FINAL], 1f9f428e-f82c-4b2b-be53-ea41bb4ae24d=[end]}
+[INFO] Current StateMachineMap content:
+    Instance: TestClass{id='id21'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@2d758472
+    Instance: TestClass{id='id23'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@5daa621b
+    Instance: TestClass{id='id22'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@41d53813
+    Instance: TestClass{id='id-declared-final-state-test'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@14bd523b
+    Instance: TestClass{id='id24'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@3095d06b
+    Instance: TestClass{id='id27'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@2ce62e27
+    Instance: TestClass{id='id26'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@7253c53
+    Instance: TestClass{id='id-or-and-path4'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@2484c868
+    Instance: TestClass{id='id1'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@67f0bf7e
+    Instance: TestClass{id='id-special-final'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@31fc658f
+    Instance: TestClass{id='id2'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@7fd32c56
+    Instance: TestClass{id='id55-and'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@726a5e6a
+    Instance: TestClass{id='id6'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@6c2fea95
+    Instance: TestClass{id='id8'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@d28a235
+    Instance: TestClass{id='id-special-final2'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@187df588
+    Instance: TestClass{id='id72'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@6e1d9b32
+    Instance: TestClass{id='id10'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@244f356
+    Instance: TestClass{id='id12'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@6885f3f7
+    Instance: TestClass{id='id-or-and-path1'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@3dc39412
+    Instance: TestClass{id='id-or-and-path3'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@72641613
+    Instance: TestClass{id='id-or-and-path2'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@2e38d44e
+    Instance: TestClass{id='id29'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@4a8bf1dc
+    Instance: TestClass{id='id28'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@46d18a33
+    Instance: TestClass{id='id-or-and'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@4bc41565
+[INFO] Fetching StateMachine for instance: TestClass{id='id55-and'}
+[INFO] StateMachine fetched for instance: TestClass{id='id55-and'}
+[INFO] Transition valid. Current state updated to: start
+[INFO] Transition valid. Current state updated to: 9513dcd1-f660-46fe-bfca-98bfedf66e53
+[INFO] Transition valid. Current state updated to: end
+[INFO] Registering StateMachine for instance: TestClass{id='id55-or'}
+[INFO] Initializing StateMachine with regex: ((start & process) | middle) -> end -> FINAL
+[DEBUG] Full regex: ((start & process) | middle) -> end -> FINAL
+[DEBUG] Main regex: ((start & process) | middle) -> end -> FINAL
+[DEBUG] Special transitions: null
+[DEBUG] Initial state: INITIAL
+[DEBUG] Declared final state: FINAL
+[DEBUG] Processing segment: ((start & process) | middle)
+[DEBUG] Handling complex segment: ((start & process) | middle)
+[DEBUG] Detected AND-OR combination
+[DEBUG] AND-Condition Transitions Configured:
+  INITIAL -> [start, process]
+  start -> [process]
+  process -> [start]
+  process, start -> [end]
+[DEBUG] Processing segment: end
+[DEBUG] Added transition from INITIAL to end
+[DEBUG] Processing segment: FINAL
+[DEBUG] Added transition from end to FINAL
+[DEBUG] Complete StateMachine transitions:
+State 80ce2666-35c4-4e07-bb3b-092f63ed437e transitions to: [com.luis.tfg.ExecutionOrder.State@4e3a6c83]
+State process transitions to: [com.luis.tfg.ExecutionOrder.State@b889cb6]
+State middle transitions to: [com.luis.tfg.ExecutionOrder.State@4e3a6c83]
+State start transitions to: [com.luis.tfg.ExecutionOrder.State@74faf450]
+State INITIAL transitions to: [com.luis.tfg.ExecutionOrder.State@54c37dab, com.luis.tfg.ExecutionOrder.State@49005dc4, com.luis.tfg.ExecutionOrder.State@6a2057e, com.luis.tfg.ExecutionOrder.State@4e3a6c83]
+State d0e16b19-1ab4-42cc-94bf-9bb1af9f558a transitions to: [com.luis.tfg.ExecutionOrder.State@4e3a6c83]
+State end transitions to: [com.luis.tfg.ExecutionOrder.State@25d9298e]
+State FINAL transitions to: []
+[DEBUG] Complete StateMachine transitions:
+State 80ce2666-35c4-4e07-bb3b-092f63ed437e transitions to: [com.luis.tfg.ExecutionOrder.State@4e3a6c83]
+State process transitions to: [com.luis.tfg.ExecutionOrder.State@b889cb6]
+State middle transitions to: [com.luis.tfg.ExecutionOrder.State@4e3a6c83]
+State start transitions to: [com.luis.tfg.ExecutionOrder.State@74faf450]
+State INITIAL transitions to: [com.luis.tfg.ExecutionOrder.State@54c37dab, com.luis.tfg.ExecutionOrder.State@49005dc4, com.luis.tfg.ExecutionOrder.State@6a2057e, com.luis.tfg.ExecutionOrder.State@4e3a6c83]
+State d0e16b19-1ab4-42cc-94bf-9bb1af9f558a transitions to: [com.luis.tfg.ExecutionOrder.State@4e3a6c83]
+State end transitions to: [com.luis.tfg.ExecutionOrder.State@25d9298e]
+State FINAL transitions to: []
+[INFO] StateMachine registered for instance: TestClass{id='id55-or'} with transitions: {80ce2666-35c4-4e07-bb3b-092f63ed437e=[end], process=[d0e16b19-1ab4-42cc-94bf-9bb1af9f558a], middle=[end], start=[80ce2666-35c4-4e07-bb3b-092f63ed437e], INITIAL=[process, middle, start, end], d0e16b19-1ab4-42cc-94bf-9bb1af9f558a=[end], end=[FINAL]}
+[INFO] Current StateMachineMap content:
+    Instance: TestClass{id='id55-or'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@6ab826bb
+    Instance: TestClass{id='id21'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@2d758472
+    Instance: TestClass{id='id23'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@5daa621b
+    Instance: TestClass{id='id22'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@41d53813
+    Instance: TestClass{id='id-declared-final-state-test'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@14bd523b
+    Instance: TestClass{id='id24'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@3095d06b
+    Instance: TestClass{id='id27'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@2ce62e27
+    Instance: TestClass{id='id26'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@7253c53
+    Instance: TestClass{id='id-or-and-path4'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@2484c868
+    Instance: TestClass{id='id1'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@67f0bf7e
+    Instance: TestClass{id='id-special-final'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@31fc658f
+    Instance: TestClass{id='id2'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@7fd32c56
+    Instance: TestClass{id='id55-and'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@726a5e6a
+    Instance: TestClass{id='id6'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@6c2fea95
+    Instance: TestClass{id='id8'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@d28a235
+    Instance: TestClass{id='id-special-final2'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@187df588
+    Instance: TestClass{id='id72'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@6e1d9b32
+    Instance: TestClass{id='id10'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@244f356
+    Instance: TestClass{id='id12'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@6885f3f7
+    Instance: TestClass{id='id-or-and-path1'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@3dc39412
+    Instance: TestClass{id='id-or-and-path3'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@72641613
+    Instance: TestClass{id='id-or-and-path2'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@2e38d44e
+    Instance: TestClass{id='id29'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@4a8bf1dc
+    Instance: TestClass{id='id28'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@46d18a33
+    Instance: TestClass{id='id-or-and'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@4bc41565
+[INFO] Fetching StateMachine for instance: TestClass{id='id55-or'}
+[INFO] StateMachine fetched for instance: TestClass{id='id55-or'}
+[INFO] Transition valid. Current state updated to: middle
+[INFO] Transition valid. Current state updated to: end
+]]></system-out>
+  </testcase>
+  <testcase name="testInvalidOrder" classname="com.luis.tfg.ExecutionOrder.MethodOrderAgentTest" time="0.009">
+    <system-out><![CDATA[[TEST] Starting testInvalidOrder
+[INFO] Registering StateMachine for instance: TestClass{id='id3'}
+[INFO] Initializing StateMachine with regex: (start process end)
+[DEBUG] Full regex: (start process end)
+[DEBUG] Main regex: (start process end)
+[DEBUG] Special transitions: null
+[DEBUG] Initial state: INITIAL
+[DEBUG] Declared final state: end
+[DEBUG] Processing segment: (start
+[DEBUG] Added transition from INITIAL to start
+[DEBUG] Processing segment: process
+[DEBUG] Added transition from start to process
+[DEBUG] Processing segment: end)
+[DEBUG] Added transition from process to end
+[DEBUG] Connected final state: end to FINAL
+[DEBUG] Complete StateMachine transitions:
+State process transitions to: [com.luis.tfg.ExecutionOrder.State@219db855]
+State start transitions to: [com.luis.tfg.ExecutionOrder.State@3702d0ed]
+State INITIAL transitions to: [com.luis.tfg.ExecutionOrder.State@5b7b0ada]
+State end transitions to: [com.luis.tfg.ExecutionOrder.State@705d72f0]
+State FINAL transitions to: []
+[DEBUG] Complete StateMachine transitions:
+State process transitions to: [com.luis.tfg.ExecutionOrder.State@219db855]
+State start transitions to: [com.luis.tfg.ExecutionOrder.State@3702d0ed]
+State INITIAL transitions to: [com.luis.tfg.ExecutionOrder.State@5b7b0ada]
+State end transitions to: [com.luis.tfg.ExecutionOrder.State@705d72f0]
+State FINAL transitions to: []
+[INFO] StateMachine registered for instance: TestClass{id='id3'} with transitions: {process=[end], start=[process], INITIAL=[start], end=[FINAL]}
+[INFO] Current StateMachineMap content:
+    Instance: TestClass{id='id55-or'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@6ab826bb
+    Instance: TestClass{id='id21'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@2d758472
+    Instance: TestClass{id='id23'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@5daa621b
+    Instance: TestClass{id='id22'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@41d53813
+    Instance: TestClass{id='id-declared-final-state-test'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@14bd523b
+    Instance: TestClass{id='id24'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@3095d06b
+    Instance: TestClass{id='id27'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@2ce62e27
+    Instance: TestClass{id='id26'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@7253c53
+    Instance: TestClass{id='id-or-and-path4'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@2484c868
+    Instance: TestClass{id='id1'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@67f0bf7e
+    Instance: TestClass{id='id3'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@3c4e23be
+    Instance: TestClass{id='id-special-final'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@31fc658f
+    Instance: TestClass{id='id2'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@7fd32c56
+    Instance: TestClass{id='id55-and'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@726a5e6a
+    Instance: TestClass{id='id6'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@6c2fea95
+    Instance: TestClass{id='id8'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@d28a235
+    Instance: TestClass{id='id-special-final2'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@187df588
+    Instance: TestClass{id='id72'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@6e1d9b32
+    Instance: TestClass{id='id10'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@244f356
+    Instance: TestClass{id='id12'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@6885f3f7
+    Instance: TestClass{id='id-or-and-path1'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@3dc39412
+    Instance: TestClass{id='id-or-and-path3'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@72641613
+    Instance: TestClass{id='id-or-and-path2'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@2e38d44e
+    Instance: TestClass{id='id29'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@4a8bf1dc
+    Instance: TestClass{id='id28'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@46d18a33
+    Instance: TestClass{id='id-or-and'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@4bc41565
+[INFO] Fetching StateMachine for instance: TestClass{id='id3'}
+[INFO] StateMachine fetched for instance: TestClass{id='id3'}
+[INFO] Transition valid. Current state updated to: start
+[TEST] Finished testInvalidOrder
+]]></system-out>
+  </testcase>
+  <testcase name="testWildcardTransitions2" classname="com.luis.tfg.ExecutionOrder.MethodOrderAgentTest" time="0.016">
+    <system-out><![CDATA[[TEST] Starting testWildcardTransitions
+[INFO] Registering StateMachine for instance: TestClass{id='id31'}
+[INFO] Initializing StateMachine with regex: (start .* middle .* end)
+[DEBUG] Full regex: (start .* middle .* end)
+[DEBUG] Main regex: (start .* middle .* end)
+[DEBUG] Special transitions: null
+[DEBUG] Initial state: INITIAL
+[DEBUG] Declared final state: end
+[DEBUG] Processing segment: (start
+[DEBUG] Added transition from INITIAL to start
+[DEBUG] Processing segment: .*
+[DEBUG] Handling complex segment: .*
+[DEBUG] Detected wildcard. Segment: .*
+[DEBUG] Wildcard condition configured: start -> .* -> [end]
+[DEBUG] Processing segment: middle
+[DEBUG] Added transition from start to middle
+[DEBUG] Processing segment: .*
+[DEBUG] Handling complex segment: .*
+[DEBUG] Detected wildcard. Segment: .*
+[DEBUG] Wildcard condition configured: middle -> .* -> [end]
+[DEBUG] Processing segment: end)
+[DEBUG] Added transition from middle to end
+[DEBUG] Connected final state: end to FINAL
+[DEBUG] Complete StateMachine transitions:
+State middle transitions to: [com.luis.tfg.ExecutionOrder.State@1d6a0962, com.luis.tfg.ExecutionOrder.State@1ec4fdcf]
+State start transitions to: [com.luis.tfg.ExecutionOrder.State@515d615, com.luis.tfg.ExecutionOrder.State@1ec4fdcf]
+State INITIAL transitions to: [com.luis.tfg.ExecutionOrder.State@488b46da]
+State end transitions to: [com.luis.tfg.ExecutionOrder.State@5e777b0]
+State FINAL transitions to: []
+State .* transitions to: [com.luis.tfg.ExecutionOrder.State@515d615, com.luis.tfg.ExecutionOrder.State@3c74d846, com.luis.tfg.ExecutionOrder.State@488b46da, com.luis.tfg.ExecutionOrder.State@1d6a0962, com.luis.tfg.ExecutionOrder.State@1ec4fdcf]
+[DEBUG] Complete StateMachine transitions:
+State middle transitions to: [com.luis.tfg.ExecutionOrder.State@1d6a0962, com.luis.tfg.ExecutionOrder.State@1ec4fdcf]
+State start transitions to: [com.luis.tfg.ExecutionOrder.State@515d615, com.luis.tfg.ExecutionOrder.State@1ec4fdcf]
+State INITIAL transitions to: [com.luis.tfg.ExecutionOrder.State@488b46da]
+State end transitions to: [com.luis.tfg.ExecutionOrder.State@5e777b0]
+State FINAL transitions to: []
+State .* transitions to: [com.luis.tfg.ExecutionOrder.State@515d615, com.luis.tfg.ExecutionOrder.State@3c74d846, com.luis.tfg.ExecutionOrder.State@488b46da, com.luis.tfg.ExecutionOrder.State@1d6a0962, com.luis.tfg.ExecutionOrder.State@1ec4fdcf]
+[INFO] StateMachine registered for instance: TestClass{id='id31'} with transitions: {middle=[end, .*], start=[middle, .*], INITIAL=[start], end=[FINAL], .*=[middle, INITIAL, start, end, .*]}
+[INFO] Current StateMachineMap content:
+    Instance: TestClass{id='id55-or'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@6ab826bb
+    Instance: TestClass{id='id21'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@2d758472
+    Instance: TestClass{id='id23'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@5daa621b
+    Instance: TestClass{id='id22'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@41d53813
+    Instance: TestClass{id='id-declared-final-state-test'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@14bd523b
+    Instance: TestClass{id='id24'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@3095d06b
+    Instance: TestClass{id='id27'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@2ce62e27
+    Instance: TestClass{id='id26'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@7253c53
+    Instance: TestClass{id='id-or-and-path4'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@2484c868
+    Instance: TestClass{id='id1'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@67f0bf7e
+    Instance: TestClass{id='id3'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@3c4e23be
+    Instance: TestClass{id='id-special-final'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@31fc658f
+    Instance: TestClass{id='id2'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@7fd32c56
+    Instance: TestClass{id='id55-and'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@726a5e6a
+    Instance: TestClass{id='id6'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@6c2fea95
+    Instance: TestClass{id='id8'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@d28a235
+    Instance: TestClass{id='id-special-final2'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@187df588
+    Instance: TestClass{id='id72'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@6e1d9b32
+    Instance: TestClass{id='id10'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@244f356
+    Instance: TestClass{id='id31'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@17fa14a3
+    Instance: TestClass{id='id12'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@6885f3f7
+    Instance: TestClass{id='id-or-and-path1'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@3dc39412
+    Instance: TestClass{id='id-or-and-path3'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@72641613
+    Instance: TestClass{id='id-or-and-path2'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@2e38d44e
+    Instance: TestClass{id='id29'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@4a8bf1dc
+    Instance: TestClass{id='id28'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@46d18a33
+    Instance: TestClass{id='id-or-and'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@4bc41565
+[INFO] Fetching StateMachine for instance: TestClass{id='id31'}
+[INFO] StateMachine fetched for instance: TestClass{id='id31'}
+[INFO] Transition valid. Current state updated to: start
+[INFO] Wildcard transition detected from start to step1
+[DEBUG] Created intermediate state for wildcard transition: step1
+[DEBUG] Dynamically added transition from start to step1
+[DEBUG] Dynamically added transition from INITIAL to step1
+[DEBUG] Dynamically added transition from step1 to middle
+[DEBUG] Dynamically added transition from step1 to INITIAL
+[DEBUG] Dynamically added transition from step1 to start
+[DEBUG] Dynamically added transition from step1 to end
+[DEBUG] Dynamically added transition from step1 to .*
+[DEBUG] Dynamically added transition from step1 to step1
+[INFO] Wildcard transition valid to state: step1
+[INFO] Transition valid. Current state updated to: middle
+[INFO] Wildcard transition detected from middle to step2
+[DEBUG] Created intermediate state for wildcard transition: step2
+[DEBUG] Dynamically added transition from middle to step2
+[DEBUG] Dynamically added transition from start to step2
+[DEBUG] Dynamically added transition from step1 to step2
+[DEBUG] Dynamically added transition from step2 to middle
+[DEBUG] Dynamically added transition from step2 to INITIAL
+[DEBUG] Dynamically added transition from step2 to start
+[DEBUG] Dynamically added transition from step2 to end
+[DEBUG] Dynamically added transition from step2 to .*
+[DEBUG] Dynamically added transition from step2 to step2
+[DEBUG] Dynamically added transition from step2 to step1
+[INFO] Wildcard transition valid to state: step2
+[INFO] Transition valid. Current state updated to: end
+[TEST] Finished testWildcardTransitions
+]]></system-out>
+  </testcase>
+  <testcase name="testOrCondition" classname="com.luis.tfg.ExecutionOrder.MethodOrderAgentTest" time="0.01">
+    <system-out><![CDATA[[TEST] Starting testOrCondition
+[INFO] Registering StateMachine for instance: TestClass{id='id7'}
+[INFO] Initializing StateMachine with regex: (start | process) -> end
+[DEBUG] Full regex: (start | process) -> end
+[DEBUG] Main regex: (start | process) -> end
+[DEBUG] Special transitions: null
+[DEBUG] Initial state: INITIAL
+[DEBUG] Declared final state: end
+[DEBUG] Processing segment: (start | process)
+[DEBUG] Handling complex segment: (start | process)
+[DEBUG] Detected OR condition. Segment: (start | process)
+[DEBUG] OR condition: INITIAL -> [start]
+[DEBUG] start -> [end]
+[DEBUG] OR condition: INITIAL -> [process]
+[DEBUG] process -> [end]
+[DEBUG] Processing segment: end
+[DEBUG] Added transition from INITIAL to end
+[DEBUG] Connected final state: end to FINAL
+[DEBUG] Complete StateMachine transitions:
+State process transitions to: [com.luis.tfg.ExecutionOrder.State@5552d10]
+State start transitions to: [com.luis.tfg.ExecutionOrder.State@5552d10]
+State INITIAL transitions to: [com.luis.tfg.ExecutionOrder.State@3b3190fd, com.luis.tfg.ExecutionOrder.State@219dd935, com.luis.tfg.ExecutionOrder.State@5552d10]
+State end transitions to: [com.luis.tfg.ExecutionOrder.State@66859ea9]
+State FINAL transitions to: []
+[DEBUG] Complete StateMachine transitions:
+State process transitions to: [com.luis.tfg.ExecutionOrder.State@5552d10]
+State start transitions to: [com.luis.tfg.ExecutionOrder.State@5552d10]
+State INITIAL transitions to: [com.luis.tfg.ExecutionOrder.State@3b3190fd, com.luis.tfg.ExecutionOrder.State@219dd935, com.luis.tfg.ExecutionOrder.State@5552d10]
+State end transitions to: [com.luis.tfg.ExecutionOrder.State@66859ea9]
+State FINAL transitions to: []
+[INFO] StateMachine registered for instance: TestClass{id='id7'} with transitions: {process=[end], start=[end], INITIAL=[process, start, end], end=[FINAL]}
+[INFO] Current StateMachineMap content:
+    Instance: TestClass{id='id55-or'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@6ab826bb
+    Instance: TestClass{id='id21'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@2d758472
+    Instance: TestClass{id='id23'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@5daa621b
+    Instance: TestClass{id='id22'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@41d53813
+    Instance: TestClass{id='id-declared-final-state-test'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@14bd523b
+    Instance: TestClass{id='id24'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@3095d06b
+    Instance: TestClass{id='id27'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@2ce62e27
+    Instance: TestClass{id='id26'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@7253c53
+    Instance: TestClass{id='id-or-and-path4'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@2484c868
+    Instance: TestClass{id='id1'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@67f0bf7e
+    Instance: TestClass{id='id3'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@3c4e23be
+    Instance: TestClass{id='id-special-final'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@31fc658f
+    Instance: TestClass{id='id2'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@7fd32c56
+    Instance: TestClass{id='id55-and'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@726a5e6a
+    Instance: TestClass{id='id7'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@4a9412c4
+    Instance: TestClass{id='id6'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@6c2fea95
+    Instance: TestClass{id='id8'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@d28a235
+    Instance: TestClass{id='id-special-final2'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@187df588
+    Instance: TestClass{id='id72'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@6e1d9b32
+    Instance: TestClass{id='id10'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@244f356
+    Instance: TestClass{id='id31'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@17fa14a3
+    Instance: TestClass{id='id12'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@6885f3f7
+    Instance: TestClass{id='id-or-and-path1'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@3dc39412
+    Instance: TestClass{id='id-or-and-path3'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@72641613
+    Instance: TestClass{id='id-or-and-path2'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@2e38d44e
+    Instance: TestClass{id='id29'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@4a8bf1dc
+    Instance: TestClass{id='id28'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@46d18a33
+    Instance: TestClass{id='id-or-and'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@4bc41565
+[INFO] Fetching StateMachine for instance: TestClass{id='id7'}
+[INFO] StateMachine fetched for instance: TestClass{id='id7'}
+[INFO] Transition valid. Current state updated to: process
+[INFO] Transition valid. Current state updated to: end
+[TEST] Finished testOrCondition
+]]></system-out>
+  </testcase>
+  <testcase name="testWildcardTransitions" classname="com.luis.tfg.ExecutionOrder.MethodOrderAgentTest" time="0.011">
+    <system-out><![CDATA[[INFO] Registering StateMachine for instance: TestClass{id='id337'}
+[INFO] Initializing StateMachine with regex: (start .* end)
+[DEBUG] Full regex: (start .* end)
+[DEBUG] Main regex: (start .* end)
+[DEBUG] Special transitions: null
+[DEBUG] Initial state: INITIAL
+[DEBUG] Declared final state: end
+[DEBUG] Processing segment: (start
+[DEBUG] Added transition from INITIAL to start
+[DEBUG] Processing segment: .*
+[DEBUG] Handling complex segment: .*
+[DEBUG] Detected wildcard. Segment: .*
+[DEBUG] Wildcard condition configured: start -> .* -> [end]
+[DEBUG] Processing segment: end)
+[DEBUG] Added transition from start to end
+[DEBUG] Connected final state: end to FINAL
+[DEBUG] Complete StateMachine transitions:
+State start transitions to: [com.luis.tfg.ExecutionOrder.State@7d15c513, com.luis.tfg.ExecutionOrder.State@320efff5]
+State INITIAL transitions to: [com.luis.tfg.ExecutionOrder.State@78b44fcb]
+State end transitions to: [com.luis.tfg.ExecutionOrder.State@12dc702b]
+State FINAL transitions to: []
+State .* transitions to: [com.luis.tfg.ExecutionOrder.State@41b2123e, com.luis.tfg.ExecutionOrder.State@7d15c513, com.luis.tfg.ExecutionOrder.State@320efff5]
+[DEBUG] Complete StateMachine transitions:
+State start transitions to: [com.luis.tfg.ExecutionOrder.State@7d15c513, com.luis.tfg.ExecutionOrder.State@320efff5]
+State INITIAL transitions to: [com.luis.tfg.ExecutionOrder.State@78b44fcb]
+State end transitions to: [com.luis.tfg.ExecutionOrder.State@12dc702b]
+State FINAL transitions to: []
+State .* transitions to: [com.luis.tfg.ExecutionOrder.State@41b2123e, com.luis.tfg.ExecutionOrder.State@7d15c513, com.luis.tfg.ExecutionOrder.State@320efff5]
+[INFO] StateMachine registered for instance: TestClass{id='id337'} with transitions: {start=[end, .*], INITIAL=[start], end=[FINAL], .*=[INITIAL, end, .*]}
+[INFO] Current StateMachineMap content:
+    Instance: TestClass{id='id55-or'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@6ab826bb
+    Instance: TestClass{id='id21'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@2d758472
+    Instance: TestClass{id='id23'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@5daa621b
+    Instance: TestClass{id='id22'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@41d53813
+    Instance: TestClass{id='id-declared-final-state-test'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@14bd523b
+    Instance: TestClass{id='id24'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@3095d06b
+    Instance: TestClass{id='id27'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@2ce62e27
+    Instance: TestClass{id='id337'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@486bcaa
+    Instance: TestClass{id='id26'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@7253c53
+    Instance: TestClass{id='id-or-and-path4'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@2484c868
+    Instance: TestClass{id='id1'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@67f0bf7e
+    Instance: TestClass{id='id3'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@3c4e23be
+    Instance: TestClass{id='id-special-final'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@31fc658f
+    Instance: TestClass{id='id2'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@7fd32c56
+    Instance: TestClass{id='id55-and'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@726a5e6a
+    Instance: TestClass{id='id7'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@4a9412c4
+    Instance: TestClass{id='id6'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@6c2fea95
+    Instance: TestClass{id='id8'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@d28a235
+    Instance: TestClass{id='id-special-final2'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@187df588
+    Instance: TestClass{id='id72'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@6e1d9b32
+    Instance: TestClass{id='id10'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@244f356
+    Instance: TestClass{id='id31'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@17fa14a3
+    Instance: TestClass{id='id12'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@6885f3f7
+    Instance: TestClass{id='id-or-and-path1'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@3dc39412
+    Instance: TestClass{id='id-or-and-path3'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@72641613
+    Instance: TestClass{id='id-or-and-path2'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@2e38d44e
+    Instance: TestClass{id='id29'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@4a8bf1dc
+    Instance: TestClass{id='id28'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@46d18a33
+    Instance: TestClass{id='id-or-and'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@4bc41565
+[INFO] Fetching StateMachine for instance: TestClass{id='id337'}
+[INFO] StateMachine fetched for instance: TestClass{id='id337'}
+[INFO] Transition valid. Current state updated to: start
+[INFO] Wildcard transition detected from start to intermediate1
+[DEBUG] Created intermediate state for wildcard transition: intermediate1
+[DEBUG] Dynamically added transition from start to intermediate1
+[DEBUG] Dynamically added transition from INITIAL to intermediate1
+[DEBUG] Dynamically added transition from intermediate1 to INITIAL
+[DEBUG] Dynamically added transition from intermediate1 to end
+[DEBUG] Dynamically added transition from intermediate1 to .*
+[DEBUG] Dynamically added transition from intermediate1 to intermediate1
+[INFO] Wildcard transition valid to state: intermediate1
+[INFO] Wildcard transition detected from intermediate1 to intermediate2
+[DEBUG] Created intermediate state for wildcard transition: intermediate2
+[DEBUG] Dynamically added transition from intermediate1 to intermediate2
+[DEBUG] Dynamically added transition from start to intermediate2
+[DEBUG] Dynamically added transition from INITIAL to intermediate2
+[DEBUG] Dynamically added transition from intermediate2 to INITIAL
+[DEBUG] Dynamically added transition from intermediate2 to end
+[DEBUG] Dynamically added transition from intermediate2 to .*
+[DEBUG] Dynamically added transition from intermediate2 to intermediate1
+[DEBUG] Dynamically added transition from intermediate2 to intermediate2
+[INFO] Wildcard transition valid to state: intermediate2
+[INFO] Transition valid. Current state updated to: end
+]]></system-out>
+  </testcase>
+  <testcase name="testFlexibleSequence" classname="com.luis.tfg.ExecutionOrder.MethodOrderAgentTest" time="0.01">
+    <system-out><![CDATA[[TEST] Starting testFlexibleSequence
+[INFO] Registering StateMachine for instance: TestClass{id='id5'}
+[INFO] Initializing StateMachine with regex: (start .* end)
+[DEBUG] Full regex: (start .* end)
+[DEBUG] Main regex: (start .* end)
+[DEBUG] Special transitions: null
+[DEBUG] Initial state: INITIAL
+[DEBUG] Declared final state: end
+[DEBUG] Processing segment: (start
+[DEBUG] Added transition from INITIAL to start
+[DEBUG] Processing segment: .*
+[DEBUG] Handling complex segment: .*
+[DEBUG] Detected wildcard. Segment: .*
+[DEBUG] Wildcard condition configured: start -> .* -> [end]
+[DEBUG] Processing segment: end)
+[DEBUG] Added transition from start to end
+[DEBUG] Connected final state: end to FINAL
+[DEBUG] Complete StateMachine transitions:
+State start transitions to: [com.luis.tfg.ExecutionOrder.State@5e9671e6, com.luis.tfg.ExecutionOrder.State@2f3a0f37]
+State INITIAL transitions to: [com.luis.tfg.ExecutionOrder.State@7ec8db0c]
+State end transitions to: [com.luis.tfg.ExecutionOrder.State@4f1a5b93]
+State FINAL transitions to: []
+State .* transitions to: [com.luis.tfg.ExecutionOrder.State@22ee1ad7, com.luis.tfg.ExecutionOrder.State@5e9671e6, com.luis.tfg.ExecutionOrder.State@2f3a0f37]
+[DEBUG] Complete StateMachine transitions:
+State start transitions to: [com.luis.tfg.ExecutionOrder.State@5e9671e6, com.luis.tfg.ExecutionOrder.State@2f3a0f37]
+State INITIAL transitions to: [com.luis.tfg.ExecutionOrder.State@7ec8db0c]
+State end transitions to: [com.luis.tfg.ExecutionOrder.State@4f1a5b93]
+State FINAL transitions to: []
+State .* transitions to: [com.luis.tfg.ExecutionOrder.State@22ee1ad7, com.luis.tfg.ExecutionOrder.State@5e9671e6, com.luis.tfg.ExecutionOrder.State@2f3a0f37]
+[INFO] StateMachine registered for instance: TestClass{id='id5'} with transitions: {start=[end, .*], INITIAL=[start], end=[FINAL], .*=[INITIAL, end, .*]}
+[INFO] Current StateMachineMap content:
+    Instance: TestClass{id='id55-or'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@6ab826bb
+    Instance: TestClass{id='id21'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@2d758472
+    Instance: TestClass{id='id23'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@5daa621b
+    Instance: TestClass{id='id22'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@41d53813
+    Instance: TestClass{id='id-declared-final-state-test'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@14bd523b
+    Instance: TestClass{id='id24'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@3095d06b
+    Instance: TestClass{id='id27'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@2ce62e27
+    Instance: TestClass{id='id337'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@486bcaa
+    Instance: TestClass{id='id26'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@7253c53
+    Instance: TestClass{id='id-or-and-path4'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@2484c868
+    Instance: TestClass{id='id1'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@67f0bf7e
+    Instance: TestClass{id='id3'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@3c4e23be
+    Instance: TestClass{id='id-special-final'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@31fc658f
+    Instance: TestClass{id='id2'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@7fd32c56
+    Instance: TestClass{id='id55-and'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@726a5e6a
+    Instance: TestClass{id='id5'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@5dd2ea0a
+    Instance: TestClass{id='id7'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@4a9412c4
+    Instance: TestClass{id='id6'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@6c2fea95
+    Instance: TestClass{id='id8'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@d28a235
+    Instance: TestClass{id='id-special-final2'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@187df588
+    Instance: TestClass{id='id72'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@6e1d9b32
+    Instance: TestClass{id='id10'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@244f356
+    Instance: TestClass{id='id31'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@17fa14a3
+    Instance: TestClass{id='id12'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@6885f3f7
+    Instance: TestClass{id='id-or-and-path1'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@3dc39412
+    Instance: TestClass{id='id-or-and-path3'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@72641613
+    Instance: TestClass{id='id-or-and-path2'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@2e38d44e
+    Instance: TestClass{id='id29'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@4a8bf1dc
+    Instance: TestClass{id='id28'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@46d18a33
+    Instance: TestClass{id='id-or-and'} -> StateMachine: com.luis.tfg.ExecutionOrder.StateMachine@4bc41565
+[INFO] Fetching StateMachine for instance: TestClass{id='id5'}
+[INFO] StateMachine fetched for instance: TestClass{id='id5'}
+[INFO] Transition valid. Current state updated to: start
+[INFO] Wildcard transition detected from start to middle
+[DEBUG] Created intermediate state for wildcard transition: middle
+[DEBUG] Dynamically added transition from start to middle
+[DEBUG] Dynamically added transition from INITIAL to middle
+[DEBUG] Dynamically added transition from middle to middle
+[DEBUG] Dynamically added transition from middle to INITIAL
+[DEBUG] Dynamically added transition from middle to end
+[DEBUG] Dynamically added transition from middle to .*
+[INFO] Wildcard transition valid to state: middle
+[INFO] Transition valid. Current state updated to: end
+[TEST] Finished testFlexibleSequence
+]]></system-out>
+  </testcase>
+</testsuite>
