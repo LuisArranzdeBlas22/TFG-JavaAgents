@@ -11201,3 +11201,4 @@ Caused by: org.codehaus.plexus.util.xml.pull.XmlPullParserException: expected ST
 2024-12-15 20:28:33,388 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/luis/eclipse-workspace1/JavaAgentsExecutionOrder/src/test/resources
 2024-12-15 20:29:03,504 [Worker-29: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 4 resources from src/main/resources to target/classes
 2024-12-15 20:29:03,507 [Worker-29: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/luis/eclipse-workspace1/JavaAgentsExecutionOrder/src/test/resources
+2024-12-15 23:19:59,490 [Worker-7: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
